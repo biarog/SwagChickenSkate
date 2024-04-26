@@ -1,19 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://cb7p7kpao8c6e"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tl0oe"]
+[gd_scene format=3 uid="uid://cb7p7kpao8c6e"]
 
 [node name="Main" type="Node"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("CapsuleShape2D_tl0oe")
-
-[node name="Button" type="Button" parent="."]
-offset_left = 28.0
-offset_top = 53.0
-offset_right = 36.0
-offset_bottom = 61.0
-text = "ola botao"
-
-[node name="Ray teste" type="Node2D" parent="."]
