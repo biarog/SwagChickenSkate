@@ -15,3 +15,5 @@ offset_top = 53.0
 offset_right = 36.0
 offset_bottom = 61.0
 text = "ola botao"
+
+[node name="Ray teste" type="Node2D" parent="."]
