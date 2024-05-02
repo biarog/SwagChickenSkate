@@ -1,6 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://cb7p7kpao8c6e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tl0oe"]
+radius = 17.0
+height = 44.0
 
 [node name="Main" type="Node"]
 
