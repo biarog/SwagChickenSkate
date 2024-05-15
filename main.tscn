@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://7w1j0h653a01" path="res://Arts/SWAG CHICKEN EGG WOW.png" id="1_1a8cc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tl0oe"]
-radius = 102.0
-height = 286.0
+radius = 80.0
+height = 254.0
 
 [node name="Main" type="Node"]
 
@@ -13,6 +13,14 @@ height = 286.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("CapsuleShape2D_tl0oe")
 
+[node name="SwagChickenEggWow" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(-5, 18)
+scale = Vector2(0.137891, 0.13431)
+texture = ExtResource("1_1a8cc")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(100, 100)
+
 [node name="Button" type="Button" parent="."]
 visible = false
 offset_left = 28.0
@@ -20,10 +28,3 @@ offset_top = 53.0
 offset_right = 36.0
 offset_bottom = 61.0
 text = "ola botao"
-
-[node name="Ray teste" type="Node2D" parent="."]
-
-[node name="SwagChickenEggWow" type="Sprite2D" parent="."]
-position = Vector2(-5, 18)
-scale = Vector2(0.137891, 0.13431)
-texture = ExtResource("1_1a8cc")
