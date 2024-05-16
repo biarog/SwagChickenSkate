@@ -17,6 +17,6 @@ position = Vector2(-4, 0)
 shape = SubResource("CapsuleShape2D_3sg5o")
 
 [node name="SwagChickenSkate" type="Sprite2D" parent="."]
-position = Vector2(-6, 18)
-scale = Vector2(0.126302, 0.131836)
+position = Vector2(-4, 16)
+scale = Vector2(0.134766, 0.131836)
 texture = ExtResource("1_8avw4")
