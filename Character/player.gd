@@ -12,4 +12,6 @@ func _process(delta):
 	if is_on_floor() and Input.is_action_just_pressed("ui_up"):
 		velocity.y -= speed
 	move_and_slide()
+	
+	#elif is_on_floor() and Input.is_action_just_pressed("ui_down"):
 
