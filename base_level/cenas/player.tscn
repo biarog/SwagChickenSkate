@@ -1,16 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgo2avomkgy6e"]
+[gd_scene load_steps=4 format=3 uid="uid://cgo2avomkgy6e"]
 
+[ext_resource type="Script" path="res://base_level/scripts/player.gd" id="1_6qs0b"]
 [ext_resource type="Texture2D" uid="uid://c0edhw7sviwr8" path="res://Arts/SWAG CHICKEN SKATE.png" id="1_8avw4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3sg5o"]
-radius = 80.0
-height = 254.0
+radius = 74.0
+height = 260.0
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(77, 410)
 scale = Vector2(0.5, 0.5)
+script = ExtResource("1_6qs0b")
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 0)
 shape = SubResource("CapsuleShape2D_3sg5o")
 
 [node name="SwagChickenSkate" type="Sprite2D" parent="."]
