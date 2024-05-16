@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgo2avomkgy6e"]
+
+[ext_resource type="Texture2D" uid="uid://7w1j0h653a01" path="res://Arts/SWAG CHICKEN EGG WOW.png" id="1_hrhoh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3sg5o"]
+radius = 80.0
+height = 254.0
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(77, 410)
+scale = Vector2(0.5, 0.5)
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_3sg5o")
+
+[node name="SwagChickenEggWow2" type="Sprite2D" parent="."]
+position = Vector2(-5, 18)
+scale = Vector2(0.137891, 0.13431)
+texture = ExtResource("1_hrhoh")
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(100, 100)
