@@ -33,6 +33,6 @@ func get_levels(path) -> void:
 #Instancia um novo botao de nivel, alem de adiciona-lo na grid
 func create_level_button(level_path: String, level_name: String) -> void:
 	var button = LEVEL_BTN.instantiate()
-	button.text = level_name
+	button.text = level_name.trim_suffix('.tscn').replace('_', ' ')
 	button.scene_path = level_path
 	grid.add_child(button)

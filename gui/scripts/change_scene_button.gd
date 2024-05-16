@@ -5,6 +5,9 @@ extends Button
 var original_size := scale
 var grow_size := Vector2(1.1, 1.1)
 
+func _ready():
+	pivot_offset = size/2
+
 #Funcao cosmetica pra aumentar o tamanho do botao quando o mouse passa em cima
 func _on_mouse_entered():
 	change_button(grow_size, 0.1)

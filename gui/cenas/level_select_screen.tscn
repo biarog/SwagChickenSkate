@@ -13,7 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uo1cu")
-dir_path = "res://levels"
+dir_path = "res://levels/cenas"
 
 [node name="Immovables" type="Control" parent="."]
 anchors_preset = 0
@@ -36,6 +36,7 @@ theme_override_font_sizes/font_size = 36
 text = "Level Selection"
 
 [node name="MoveScreenRight" type="Button" parent="Immovables"]
+visible = false
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -53,6 +54,7 @@ text = ">"
 script = ExtResource("3_oudvf")
 
 [node name="MoveScreenLeft" type="Button" parent="Immovables"]
+visible = false
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -78,17 +80,10 @@ text = "back"
 scene_path = "res://gui/cenas/title_screen.tscn"
 
 [node name="GridLevels" type="GridContainer" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.482639
-anchor_top = 0.527778
-anchor_right = 0.517361
-anchor_bottom = 0.589506
-offset_top = 6.99997
-offset_bottom = 6.99997
-grow_horizontal = 2
-grow_vertical = 2
-pivot_offset = Vector2(20, 20)
-theme_override_constants/h_separation = 1527
-columns = 5
-metadata/_edit_use_anchors_ = true
+layout_mode = 0
+offset_left = 547.0
+offset_top = 344.0
+offset_right = 605.0
+offset_bottom = 375.0
+theme_override_constants/h_separation = 1035
+columns = 2
