@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://daimqumyvlrw2"]
 
-[ext_resource type="Script" path="res://Espinhos.gd" id="1_2jtkp"]
-[ext_resource type="Texture2D" path="res://Arts/espinhos.png" id="2_ccghy"]
+[ext_resource type="Script" path="res://obstáculos/Espinhos.gd" id="1_2jtkp"]
+[ext_resource type="Texture2D" uid="uid://5i5s1ef8n50j" path="res://Arts/espinhos.png" id="2_ccghy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_db5wd"]
 radius = 27.074

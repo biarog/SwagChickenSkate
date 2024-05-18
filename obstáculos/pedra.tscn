@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://8100emtt7r7d"]
+
+[ext_resource type="Script" path="res://obstáculos/pedra.gd" id="1_rtk78"]
+[ext_resource type="Texture2D" uid="uid://bfclaid2aylhv" path="res://Arts/pedra.png" id="2_lmrjk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f4f5b"]
+size = Vector2(54, 66)
+
+[node name="pedra" type="StaticBody2D"]
+script = ExtResource("1_rtk78")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
+shape = SubResource("RectangleShape2D_f4f5b")
+
+[node name="Pedra" type="Sprite2D" parent="."]
+position = Vector2(33, 15)
+scale = Vector2(0.0603841, 0.0603841)
+texture = ExtResource("2_lmrjk")
