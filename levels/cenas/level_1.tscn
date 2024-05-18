@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://2jkmo7ulk32v"]
+
+[ext_resource type="Texture2D" uid="uid://fqoeosm2r44a" path="res://Arts/tiles_iniciais.png" id="1_nfm84"]
+[ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://Character/player.tscn" id="2_igi8q"]
+[ext_resource type="Script" path="res://Character/player.gd" id="3_r1u40"]
+[ext_resource type="PackedScene" uid="uid://pxpci23qvoyr" path="res://espinhos.tscn" id="4_fty5y"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xfi4h"]
+texture = ExtResource("1_nfm84")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_0rv3b"]
+sources/0 = SubResource("TileSetAtlasSource_xfi4h")
+
+[node name="level 1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, -24)
+scale = Vector2(3, 3)
+tile_set = SubResource("TileSet_0rv3b")
+format = 2
+layer_0/tile_data = PackedInt32Array(851968, 0, 0, 851969, 0, 0, 851970, 0, 0, 851971, 0, 0, 851972, 0, 0, 851973, 0, 0, 851974, 0, 0, 851975, 0, 0, 851976, 0, 0, 851977, 0, 0, 851978, 0, 0, 851979, 0, 0, 851980, 0, 0, 851981, 0, 0, 851982, 0, 0, 851983, 0, 0, 851984, 0, 0, 851985, 0, 0, 851986, 0, 0, 851987, 0, 0, 851988, 0, 0, 851989, 0, 0, 851990, 0, 0, 851991, 0, 0, 589828, 0, 1, 589829, 0, 1, 589830, 0, 1, 589831, 0, 1, 589832, 0, 1, 589833, 0, 1, 589834, 0, 1, 589835, 0, 1, 589836, 0, 1, 589837, 0, 1, 589838, 0, 1, 589839, 0, 1, 327684, 0, 2, 327685, 0, 2, 327686, 0, 2, 327687, 0, 2, 327688, 0, 2, 327689, 0, 2, 327690, 0, 2, 327691, 0, 2, 327692, 0, 2, 327693, 0, 2, 327694, 0, 2, 327695, 0, 2, 327696, 0, 2, 327697, 0, 2, 327698, 0, 2, 327699, 0, 2, 327700, 0, 2, 327701, 0, 2, 327702, 0, 2, 327703, 0, 2, 327704, 0, 2, 327705, 0, 2, 327706, 0, 2, 327680, 0, 2, 327681, 0, 2, 327682, 0, 2, 327683, 0, 2, 589827, 0, 1, 589826, 0, 1, 589825, 0, 1, 589824, 0, 1, 655359, 0, 1, 589840, 0, 1, 589841, 0, 1, 589842, 0, 1, 589843, 0, 1, 589844, 0, 1, 589845, 0, 1, 589846, 0, 1, 589847, 0, 1, 589848, 0, 1, 589849, 0, 1, 589850, 0, 1, 917503, 0, 0, 851992, 0, 0, 851993, 0, 0, 851994, 0, 0, 851995, 0, 0, 393215, 0, 2)
+
+[node name="Player" parent="." instance=ExtResource("2_igi8q")]
+position = Vector2(68, 370)
+script = ExtResource("3_r1u40")
+
+[node name="espinhos" parent="." instance=ExtResource("4_fty5y")]
+position = Vector2(72, 192)
+scale = Vector2(0.5, 0.5)
