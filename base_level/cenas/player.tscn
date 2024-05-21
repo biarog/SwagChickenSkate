@@ -1,22 +1,37 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgo2avomkgy6e"]
+[gd_scene load_steps=5 format=3 uid="uid://cgo2avomkgy6e"]
 
 [ext_resource type="Script" path="res://base_level/scripts/player.gd" id="1_6qs0b"]
 [ext_resource type="Texture2D" uid="uid://c0edhw7sviwr8" path="res://Arts/SWAG CHICKEN SKATE.png" id="1_8avw4"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3sg5o"]
-radius = 74.0
-height = 260.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h0adn"]
+radius = 4.0
+height = 112.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rxmrg"]
+radius = 80.0
+height = 240.0
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(77, 410)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_6qs0b")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-4, 0)
-shape = SubResource("CapsuleShape2D_3sg5o")
-
 [node name="SwagChickenSkate" type="Sprite2D" parent="."]
 position = Vector2(-4, 16)
 scale = Vector2(0.134766, 0.131836)
 texture = ExtResource("1_8avw4")
+
+[node name="CollisionFloor" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 118)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_h0adn")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionObjects" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-2, -8)
+shape = SubResource("CapsuleShape2D_rxmrg")
+disabled = true
