@@ -1,0 +1,87 @@
+[gd_scene load_steps=5 format=3 uid="uid://pakpwxuavyl4"]
+
+[ext_resource type="Script" path="res://gui/scripts/pause_window.gd" id="1_464oj"]
+[ext_resource type="PackedScene" uid="uid://duu18ax3r6re0" path="res://gui/cenas/change_scene_button.tscn" id="2_ssqjs"]
+[ext_resource type="Script" path="res://gui/scripts/Restart_btn.gd" id="3_emj0c"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyp2k"]
+font_size = 30
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[node name="PauseWindow" type="CanvasLayer"]
+script = ExtResource("1_464oj")
+
+[node name="Pause_btn" type="Button" parent="."]
+offset_left = 40.0
+offset_top = 38.0
+offset_right = 82.0
+offset_bottom = 88.0
+theme_override_font_sizes/font_size = 30
+text = "l l"
+
+[node name="PauseMenu" type="ColorRect" parent="."]
+process_mode = 2
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -150.0
+offset_right = 225.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(225, 150)
+color = Color(1, 0.847059, 1, 1)
+
+[node name="LvlSelect_btn" parent="PauseMenu" instance=ExtResource("2_ssqjs")]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 230.0
+offset_right = 421.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 25
+text = "Level Select"
+scene_path = "res://gui/cenas/level_select_screen.tscn"
+
+[node name="Restart_btn" type="Button" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 230.0
+offset_right = 149.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 25
+text = "Restart"
+script = ExtResource("3_emj0c")
+
+[node name="Paused_lvl" type="Label" parent="PauseMenu"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -52.5
+offset_top = 15.0
+offset_right = 52.5
+offset_bottom = 57.0
+grow_horizontal = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_jyp2k")
+
+[node name="Close_btn" type="Button" parent="PauseMenu"]
+layout_mode = 0
+offset_left = 386.0
+offset_top = 17.0
+offset_right = 429.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 30
+text = " X "
+
+[connection signal="pressed" from="Pause_btn" to="." method="_on_pause_btn_pressed"]
+[connection signal="mouse_entered" from="PauseMenu/Restart_btn" to="PauseMenu/Restart_btn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="PauseMenu/Restart_btn" to="PauseMenu/Restart_btn" method="_on_mouse_exited"]
+[connection signal="pressed" from="PauseMenu/Restart_btn" to="." method="_on_restart_btn_pressed"]
+[connection signal="pressed" from="PauseMenu/Restart_btn" to="PauseMenu/Restart_btn" method="_on_pressed"]
+[connection signal="pressed" from="PauseMenu/Close_btn" to="." method="_on_close_btn_pressed"]

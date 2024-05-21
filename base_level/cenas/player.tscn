@@ -26,12 +26,12 @@ position = Vector2(-2, 118)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_h0adn")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-2, 0)
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionObjects" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-2, -8)
 shape = SubResource("CapsuleShape2D_rxmrg")
 disabled = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2, 0)
