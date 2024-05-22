@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://duu18ax3r6re0" path="res://gui/cenas/change_scene_button.tscn" id="1_glt1r"]
 [ext_resource type="Script" path="res://gui/scripts/level_select_screen.gd" id="1_uo1cu"]
-[ext_resource type="Script" path="res://gui/scripts/MoveScreenRight.gd" id="3_oudvf"]
-[ext_resource type="Script" path="res://gui/scripts/MoveScreenLeft.gd" id="4_we3vs"]
+[ext_resource type="Script" path="res://gui/scripts/move_screen_right.gd" id="3_oudvf"]
+[ext_resource type="Script" path="res://gui/scripts/move_screen_left.gd" id="4_we3vs"]
 
 [node name="LevelSelectScreen" type="Control"]
 layout_mode = 3
