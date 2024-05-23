@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://dorbqfhfmckjk"]
+[gd_scene load_steps=11 format=3 uid="uid://dorbqfhfmckjk"]
 
 [ext_resource type="Script" path="res://levels/scripts/level_1.gd" id="1_6f18c"]
 [ext_resource type="PackedScene" uid="uid://hs0ou4mdda5s" path="res://base_level/cenas/tile_map.tscn" id="1_7t7sl"]
 [ext_resource type="Script" path="res://levels/scripts/camera_level_1.gd" id="2_2do7q"]
 [ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="2_iejf0"]
 [ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_6308u"]
+[ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="6_ev5ef"]
 [ext_resource type="PackedScene" uid="uid://daimqumyvlrw2" path="res://base_level/cenas/espinho.tscn" id="6_i6141"]
 [ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="6_iborm"]
 [ext_resource type="PackedScene" uid="uid://8100emtt7r7d" path="res://base_level/cenas/pedra.tscn" id="6_usgxl"]
@@ -27,6 +28,8 @@ script = ExtResource("2_2do7q")
 [node name="PauseWindow" parent="CameraLevel" instance=ExtResource("3_6308u")]
 
 [node name="DeathWindow" parent="CameraLevel" instance=ExtResource("6_iborm")]
+
+[node name="WinWindow" parent="CameraLevel" instance=ExtResource("6_ev5ef")]
 
 [node name="Player" parent="." instance=ExtResource("2_iejf0")]
 position = Vector2(124, 558)

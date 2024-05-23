@@ -17,3 +17,5 @@ func _on_victory_area_body_entered(body):
 	if body.name == 'Player':
 		win_condition = true
 		$CameraLevel.set_cam_velocity(0.0)
+		$CameraLevel/WinWindow.show()
+		$CameraLevel/PauseWindow.hide()
