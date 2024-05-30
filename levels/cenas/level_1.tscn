@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://levels/scripts/level_1.gd" id="1_6f18c"]
 [ext_resource type="PackedScene" uid="uid://hs0ou4mdda5s" path="res://base_level/cenas/tile_map.tscn" id="1_7t7sl"]
 [ext_resource type="Script" path="res://levels/scripts/camera_level_1.gd" id="2_2do7q"]
-[ext_resource type="Texture2D" uid="uid://b26e7cjechlow" path="res://Arts/cenario3.jpeg" id="2_b5r4l"]
+[ext_resource type="Texture2D" uid="uid://bp6813enwqppr" path="res://Arts/background.jpg" id="2_emft2"]
 [ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="2_iejf0"]
 [ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_6308u"]
 [ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="6_ev5ef"]
@@ -20,10 +20,10 @@ script = ExtResource("1_6f18c")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_top = 2.0
-offset_right = 18418.0
-offset_bottom = 1154.0
-scale = Vector2(0.561632, 0.561632)
-texture = ExtResource("2_b5r4l")
+offset_right = 36693.0
+offset_bottom = 2306.0
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("2_emft2")
 stretch_mode = 1
 
 [node name="TileMap" parent="." instance=ExtResource("1_7t7sl")]
