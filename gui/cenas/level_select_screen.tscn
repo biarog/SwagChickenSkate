@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://tiqp58w64ol4"]
+[gd_scene load_steps=3 format=3 uid="uid://tiqp58w64ol4"]
 
 [ext_resource type="PackedScene" uid="uid://duu18ax3r6re0" path="res://gui/cenas/change_scene_button.tscn" id="1_glt1r"]
 [ext_resource type="Script" path="res://gui/scripts/level_select_screen.gd" id="1_uo1cu"]
-[ext_resource type="Script" path="res://gui/scripts/move_screen_right.gd" id="3_oudvf"]
-[ext_resource type="Script" path="res://gui/scripts/move_screen_left.gd" id="4_we3vs"]
 
 [node name="LevelSelectScreen" type="Control"]
 layout_mode = 3
@@ -15,65 +13,54 @@ grow_vertical = 2
 script = ExtResource("1_uo1cu")
 dir_path = "res://levels/cenas"
 
-[node name="Immovables" type="Control" parent="."]
-anchors_preset = 0
-offset_top = 44.0
-offset_right = 40.0
-offset_bottom = 84.0
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(576, 324)
 
-[node name="Label" type="Label" parent="Immovables"]
-layout_mode = 1
+[node name="Label" type="Label" parent="Camera"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 426.5
-offset_top = 65.0
-offset_right = 685.5
-offset_bottom = 115.0
+offset_left = -129.5
+offset_top = -215.0
+offset_right = 129.5
+offset_bottom = -165.0
 grow_horizontal = 2
 pivot_offset = Vector2(129.5, 25)
 theme_override_font_sizes/font_size = 36
 text = "Level Selection"
 
-[node name="MoveScreenRight" type="Button" parent="Immovables"]
-visible = false
-layout_mode = 1
+[node name="MoveScreenRight" type="Button" parent="Camera"]
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 1034.0
-offset_top = 289.0
-offset_right = 1052.0
-offset_bottom = 320.0
+offset_left = 498.0
+offset_top = 29.0
+offset_right = 516.0
+offset_bottom = 60.0
 grow_horizontal = 0
 grow_vertical = 2
 pivot_offset = Vector2(9, 15.5)
 text = ">"
-script = ExtResource("3_oudvf")
 
-[node name="MoveScreenLeft" type="Button" parent="Immovables"]
-visible = false
-layout_mode = 1
+[node name="MoveScreenLeft" type="Button" parent="Camera"]
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_left = 61.0
-offset_top = 289.0
-offset_right = 79.0
-offset_bottom = 320.0
+offset_left = -515.0
+offset_top = 29.0
+offset_right = -497.0
+offset_bottom = 60.0
 grow_vertical = 2
 pivot_offset = Vector2(9, 15.5)
 text = "<"
-script = ExtResource("4_we3vs")
 
-[node name="ReturnButton" parent="Immovables" instance=ExtResource("1_glt1r")]
-layout_mode = 2
-offset_left = 25.0
-offset_top = 22.0
-offset_right = 106.0
-offset_bottom = 75.0
+[node name="ReturnButton" parent="Camera" instance=ExtResource("1_glt1r")]
+offset_left = -551.0
+offset_top = -258.0
+offset_right = -470.0
+offset_bottom = -205.0
 pivot_offset = Vector2(40.5, 26.5)
 theme_override_font_sizes/font_size = 32
 text = "back"
@@ -86,4 +73,6 @@ offset_top = 344.0
 offset_right = 605.0
 offset_bottom = 375.0
 theme_override_constants/h_separation = 1035
-columns = 2
+
+[connection signal="pressed" from="Camera/MoveScreenRight" to="." method="_on_move_screen_right_pressed"]
+[connection signal="pressed" from="Camera/MoveScreenLeft" to="." method="_on_move_screen_left_pressed"]

@@ -5,11 +5,29 @@ const LEVEL_BTN = preload("res://gui/cenas/change_scene_button.tscn")
 @export_dir var dir_path
 
 @onready var grid = $GridLevels
+@onready var screen = $Camera
+@onready var btn_right = $Camera/MoveScreenRight
+@onready var btn_left = $Camera/MoveScreenLeft
 
 var qnt_levels := 0
+var tela_atual := 1
+
+func left_btn_vis():
+	if(tela_atual == 1 && btn_left.is_visible()):
+		btn_left.hide()
+	elif (tela_atual > 1 && !btn_left.is_visible()):
+		btn_left.show()
+
+func right_btn_vis():
+	if(tela_atual == qnt_levels && btn_right.is_visible()):
+		btn_right.hide()
+	elif (tela_atual < qnt_levels && !btn_right.is_visible()):
+		btn_right.show()
 
 func _ready() -> void:
 	get_levels(dir_path)
+	left_btn_vis()
+	right_btn_vis()
 
 #Para cada arquivo no diretorio definido pelo dir_path sera adicionada uma nova coluna na grid
 #e chama a funcao create_level_button
@@ -36,3 +54,21 @@ func create_level_button(level_path: String, level_name: String) -> void:
 	button.text = level_name.trim_suffix('.tscn').replace('_', ' ')
 	button.scene_path = level_path
 	grid.add_child(button)
+
+func _on_move_screen_right_pressed() -> void:
+	tela_atual += 1
+	var movimento : Vector2
+	movimento.x = 1096
+	movimento.y = 0
+	screen.translate(movimento)
+	left_btn_vis()
+	right_btn_vis()
+
+func _on_move_screen_left_pressed()  -> void:
+	tela_atual -= 1
+	var movimento : Vector2
+	movimento.x = -1096
+	movimento.y = 0
+	screen.translate(movimento)
+	left_btn_vis()
+	right_btn_vis()
