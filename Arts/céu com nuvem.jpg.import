@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k51ogr16vxx3"
-path="res://.godot/imported/cenario1.jpeg-c008795e932e5783b719ea454291ea68.ctex"
+uid="uid://c8e85ium1tihd"
+path="res://.godot/imported/céu com nuvem.jpg-39fa6696fd5bf3b369d796b908a42fec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/cenario1.jpeg"
-dest_files=["res://.godot/imported/cenario1.jpeg-c008795e932e5783b719ea454291ea68.ctex"]
+source_file="res://Arts/céu com nuvem.jpg"
+dest_files=["res://.godot/imported/céu com nuvem.jpg-39fa6696fd5bf3b369d796b908a42fec.ctex"]
 
 [params]
 

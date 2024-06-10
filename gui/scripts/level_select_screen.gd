@@ -55,20 +55,22 @@ func create_level_button(level_path: String, level_name: String) -> void:
 	button.scene_path = level_path
 	grid.add_child(button)
 
+func move_screen(move_to: Vector2) -> void:
+	var tween = create_tween()
+	tween.tween_property(screen, "position", move_to, 0.7).set_trans(Tween.TRANS_BACK)
+
 func _on_move_screen_right_pressed() -> void:
 	tela_atual += 1
-	var movimento : Vector2
-	movimento.x = 1096
-	movimento.y = 0
-	screen.translate(movimento)
+	var movimento : Vector2 = screen.position
+	movimento.x += 1096
+	move_screen(movimento)
 	left_btn_vis()
 	right_btn_vis()
 
 func _on_move_screen_left_pressed()  -> void:
 	tela_atual -= 1
-	var movimento : Vector2
-	movimento.x = -1096
-	movimento.y = 0
-	screen.translate(movimento)
+	var movimento : Vector2 = screen.position
+	movimento.x -= 1096
+	move_screen(movimento)
 	left_btn_vis()
 	right_btn_vis()

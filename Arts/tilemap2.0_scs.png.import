@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b26e7cjechlow"
-path="res://.godot/imported/cenario3.jpeg-6752b4d7aeb89a4b95eef772bd7e7694.ctex"
+uid="uid://bpx6m2hd5lqdp"
+path="res://.godot/imported/tilemap2.0_scs.png-ed1508acbb8d39077bce02f6b7bd54ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/cenario3.jpeg"
-dest_files=["res://.godot/imported/cenario3.jpeg-6752b4d7aeb89a4b95eef772bd7e7694.ctex"]
+source_file="res://Arts/tilemap2.0_scs.png"
+dest_files=["res://.godot/imported/tilemap2.0_scs.png-ed1508acbb8d39077bce02f6b7bd54ad.ctex"]
 
 [params]
 

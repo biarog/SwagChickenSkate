@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://de58oiqjfmktk"]
+
+[ext_resource type="Script" path="res://base_level/scripts/colecionavel.gd" id="1_3n4tx"]
+[ext_resource type="Texture2D" uid="uid://dc8ug4te8i3hi" path="res://Arts/icon.svg" id="2_nu5w4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iowbg"]
+size = Vector2(57, 56)
+
+[node name="Mixtape" type="Area2D"]
+script = ExtResource("1_3n4tx")
+
+[node name="DesenhoMixtape" type="Sprite2D" parent="."]
+position = Vector2(1.90735e-06, 0)
+scale = Vector2(0.449219, 0.435604)
+texture = ExtResource("2_nu5w4")
+
+[node name="ColisaoMixtape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_iowbg")

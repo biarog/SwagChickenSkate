@@ -13,7 +13,7 @@ config_version=5
 config/name="Swag Chicken Skate"
 run/main_scene="res://gui/cenas/title_screen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Arts/icon.svg"
 
 [display]
 
