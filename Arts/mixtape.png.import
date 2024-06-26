@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br6y4xu3lgo5f"
-path="res://.godot/imported/tiles_iniciais.png-3f2428b3ffbcda7a89232d2631cd4829.ctex"
+uid="uid://cx8fjigpwrwor"
+path="res://.godot/imported/mixtape.png-044e9bcdcf43b7433beadd1229ab6d7d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/tiles_iniciais.png"
-dest_files=["res://.godot/imported/tiles_iniciais.png-3f2428b3ffbcda7a89232d2631cd4829.ctex"]
+source_file="res://Arts/mixtape.png"
+dest_files=["res://.godot/imported/mixtape.png-044e9bcdcf43b7433beadd1229ab6d7d.ctex"]
 
 [params]
 

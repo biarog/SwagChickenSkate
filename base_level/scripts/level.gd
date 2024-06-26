@@ -14,8 +14,10 @@ func _ready():
 	
 	for i in 3:
 		mixtapes[i] = playerData.lvl_Mixtapes[lvl_number][i+1]
-	
-
+		var node_mix = get_node("Colecionaveis/Mixtape" + str(i+1))
+		node_mix.mix_number = i
+		node_mix.mix_status = mixtapes[i]
+		node_mix.update_frame()
 
 func kill_player():
 	get_tree().paused = true
