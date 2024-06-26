@@ -1,9 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://hs0ou4mdda5s"]
-
-[ext_resource type="Texture2D" uid="uid://br6y4xu3lgo5f" path="res://Arts/tiles_iniciais.png" id="1_afh4m"]
+[gd_scene load_steps=3 format=3 uid="uid://hs0ou4mdda5s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h16pq"]
-texture = ExtResource("1_afh4m")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
