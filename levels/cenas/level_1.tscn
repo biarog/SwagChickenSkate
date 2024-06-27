@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://c8e85ium1tihd" path="res://Arts/céu com nuvem.jpg" id="2_oskho"]
 [ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_6308u"]
 [ext_resource type="Texture2D" uid="uid://nwfm2tqmk6q4" path="res://Arts/tilemap2.0_scs.png" id="5_jbtpy"]
-[ext_resource type="PackedScene" path="res://gui/cenas/win_window.tscn" id="6_ev5ef"]
+[ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="6_ev5ef"]
 [ext_resource type="PackedScene" uid="uid://daimqumyvlrw2" path="res://base_level/cenas/espinho.tscn" id="6_i6141"]
-[ext_resource type="PackedScene" path="res://gui/cenas/death_window.tscn" id="6_iborm"]
+[ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="6_iborm"]
 [ext_resource type="PackedScene" uid="uid://8100emtt7r7d" path="res://base_level/cenas/pedra.tscn" id="6_usgxl"]
 [ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="11_nfurp"]
 
@@ -43,12 +43,18 @@ texture_region_size = Vector2i(64, 64)
 2:2/0 = 0
 2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -10.6667, -32, -10.6667)
+2:2/0/physics_layer_0/polygon_0/one_way = true
 2:1/0 = 0
 2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -10.6667, -32, -10.6667)
+2:1/0/physics_layer_0/polygon_0/one_way = true
 2:0/0 = 0
 2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -10.6667, -32, -10.6667)
+2:0/0/physics_layer_0/polygon_0/one_way = true
 
 [sub_resource type="TileSet" id="TileSet_dcide"]
 tile_size = Vector2i(64, 64)
