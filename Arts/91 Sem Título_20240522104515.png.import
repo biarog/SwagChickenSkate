@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br6y4xu3lgo5f"
-path="res://.godot/imported/tiles_iniciais.png-3f2428b3ffbcda7a89232d2631cd4829.ctex"
+uid="uid://ctpui0yabiv3t"
+path="res://.godot/imported/91 Sem Título_20240522104515.png-62a810043ebb7d613925aa9da6c6dfcd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/tiles_iniciais.png"
-dest_files=["res://.godot/imported/tiles_iniciais.png-3f2428b3ffbcda7a89232d2631cd4829.ctex"]
+source_file="res://Arts/91 Sem Título_20240522104515.png"
+dest_files=["res://.godot/imported/91 Sem Título_20240522104515.png-62a810043ebb7d613925aa9da6c6dfcd.ctex"]
 
 [params]
 

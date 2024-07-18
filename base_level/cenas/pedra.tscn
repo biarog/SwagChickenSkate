@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://8100emtt7r7d"]
+
+[ext_resource type="Script" path="res://base_level/scripts/obstaculo.gd" id="1_naqmi"]
+[ext_resource type="Texture2D" uid="uid://bfclaid2aylhv" path="res://Arts/pedra.png" id="2_v00eg"]
+
+[node name="Pedra" type="Area2D"]
+script = ExtResource("1_naqmi")
+
+[node name="DesenhoPedra" type="Sprite2D" parent="."]
+position = Vector2(37, 14)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_v00eg")
+
+[node name="ColisaoPedra" type="CollisionPolygon2D" parent="."]
+position = Vector2(1.19209e-07, -1.19209e-07)
+scale = Vector2(0.06, 0.06)
+polygon = PackedVector2Array(500, 316.667, 416.667, -116.667, 350, -300, 183.333, -500, 16.6667, -566.667, -166.667, -550, -283.333, -450, -450, 83.3333, -450, 300, -383.333, 416.667, -266.667, 483.333, -83.3333, 533.333, 166.667, 550, 416.667, 450)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
