@@ -1,0 +1,78 @@
+[gd_scene load_steps=11 format=3 uid="uid://cfurubwla7y3n"]
+
+[ext_resource type="TileSet" uid="uid://dxnfvcya0gyvj" path="res://Arts/tilemap.tres" id="1_fl0a5"]
+[ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_popjn"]
+[ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_51lvx"]
+[ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="4_swbx6"]
+[ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="5_chh37"]
+[ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="6_xc5iy"]
+[ext_resource type="PackedScene" uid="uid://daimqumyvlrw2" path="res://base_level/cenas/espinho.tscn" id="7_kww86"]
+[ext_resource type="PackedScene" uid="uid://8100emtt7r7d" path="res://base_level/cenas/pedra.tscn" id="8_wvkuy"]
+[ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="9_g2cpl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0t6uf"]
+size = Vector2(382, 618)
+
+[node name="Level 0" type="Node2D"]
+script = ExtResource("1_popjn")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 33)
+tile_set = ExtResource("1_fl0a5")
+format = 2
+layer_0/tile_data = PackedInt32Array(589828, 0, 0, 589827, 65536, 0, 589826, 0, 0, 589825, 65536, 0, 589824, 0, 2, 589829, 65536, 0, 589830, 0, 0, 589831, 65536, 0, 589832, 0, 0, 589833, 65536, 0, 589834, 0, 0, 589835, 65536, 0, 589836, 0, 0, 589837, 65536, 0, 589838, 0, 0, 589839, 65536, 0, 589840, 0, 0, 589841, 65536, 0, 589842, 0, 0, 589843, 65536, 0, 589844, 0, 0, 589845, 65536, 0, 589846, 0, 0, 589847, 65536, 0, 589848, 0, 0, 589849, 65536, 0, 589850, 0, 0, 589851, 65536, 0, 589852, 0, 0, 589853, 65536, 0, 589854, 0, 0, 589855, 65536, 0, 589856, 0, 0, 589857, 65536, 0, 589858, 0, 0, 589859, 65536, 0, 589860, 0, 0, 589861, 65536, 0, 589862, 0, 0, 589863, 65536, 0, 589864, 0, 0, 589865, 65536, 1, 393235, 131072, 2, 393236, 131072, 2, 393237, 131072, 2, 393238, 131072, 2, 393239, 131072, 2, 393240, 131072, 2, 393241, 131072, 2, 196634, 131072, 0, 196635, 131072, 0, 196636, 131072, 0, 196637, 131072, 0, 196638, 131072, 0, 196639, 131072, 0, 393249, 131072, 2, 393250, 131072, 2, 393251, 131072, 2, 393252, 131072, 2, 393253, 131072, 2, 196650, 131072, 0, 196651, 131072, 0, 196652, 131072, 0, 196653, 131072, 0, 196654, 131072, 0, 196655, 131072, 0, 196623, 131072, 0, 196622, 131072, 0, 196621, 131072, 0, 196620, 131072, 0, 196619, 131072, 0, 196618, 131072, 0, 196617, 131072, 0, 393230, 131072, 2, 393229, 131072, 2, 393228, 131072, 2, 393227, 131072, 2, 393226, 131072, 2, 393225, 131072, 2, 393231, 131072, 2, 393232, 131072, 2, 393233, 131072, 2, 196625, 131072, 0, 196624, 131072, 0, 393234, 131072, 2, 589873, 65536, 0, 589874, 0, 0, 589875, 65536, 0, 589876, 0, 0, 589877, 65536, 0, 589878, 0, 0, 589870, 0, 2, 589871, 65536, 0, 589872, 0, 0, 589890, 65536, 0, 589891, 0, 0, 589892, 65536, 1, 589879, 65536, 0, 589880, 0, 0, 589881, 65536, 0, 589882, 0, 0, 589883, 65536, 0, 589884, 0, 0, 589885, 65536, 0, 589886, 0, 0, 589887, 0, 0, 589888, 65536, 0, 589889, 0, 0)
+
+[node name="CameraLevel" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.5, 0.5)
+
+[node name="PauseWindow" parent="CameraLevel" instance=ExtResource("3_51lvx")]
+
+[node name="DeathWindow" parent="CameraLevel" instance=ExtResource("4_swbx6")]
+
+[node name="WinWindow" parent="CameraLevel" instance=ExtResource("5_chh37")]
+process_mode = 2
+
+[node name="Player" parent="." instance=ExtResource("6_xc5iy")]
+position = Vector2(120, 544)
+scale = Vector2(0.5, 0.5)
+SKATE_VELOCITY = 225.0
+
+[node name="VictoryArea" type="Area2D" parent="."]
+position = Vector2(-7836, 0)
+
+[node name="VicotryCollision" type="CollisionShape2D" parent="VictoryArea"]
+position = Vector2(12028, 313)
+shape = SubResource("RectangleShape2D_0t6uf")
+
+[node name="Obstaculos" type="Node" parent="."]
+
+[node name="Espinho" parent="Obstaculos" instance=ExtResource("7_kww86")]
+position = Vector2(1607, 351)
+scale = Vector2(1.44, 1.44)
+
+[node name="Pedra" parent="Obstaculos" instance=ExtResource("8_wvkuy")]
+position = Vector2(1873, 566)
+scale = Vector2(1.4, 1.4)
+
+[node name="Colecionaveis" type="Node" parent="."]
+
+[node name="Mixtape1" parent="Colecionaveis" instance=ExtResource("9_g2cpl")]
+position = Vector2(1848, 132)
+
+[node name="Mixtape2" parent="Colecionaveis" instance=ExtResource("9_g2cpl")]
+position = Vector2(2879, 147)
+
+[node name="Mixtape3" parent="Colecionaveis" instance=ExtResource("9_g2cpl")]
+position = Vector2(3525, 528)
+
+[connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
+[connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
+[connection signal="got_hit" from="Obstaculos/Espinho" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Pedra" to="." method="_on_got_hit"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape1" to="Colecionaveis/Mixtape1" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape1" to="." method="_on_mixtape_1_collected_mix"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape2" to="Colecionaveis/Mixtape2" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape2" to="." method="_on_mixtape_2_collected_mix"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape3" to="Colecionaveis/Mixtape3" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape3" to="." method="_on_mixtape_3_collected_mix"]

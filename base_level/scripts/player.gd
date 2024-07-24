@@ -1,12 +1,11 @@
 extends CharacterBody2D
 
 const JUMP_VELOCITY = -615.0
-const SKATE_VELOCITY =250.0
+@export var SKATE_VELOCITY : float
 
 signal exited_camera
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
 
 func _physics_process(delta):
 	velocity.x = SKATE_VELOCITY
