@@ -1,0 +1,136 @@
+[gd_scene load_steps=13 format=3 uid="uid://dorbqfhfmckjk"]
+
+[ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_6f18c"]
+[ext_resource type="Script" path="res://levels/scripts/camera_level_1.gd" id="2_2do7q"]
+[ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="2_iejf0"]
+[ext_resource type="Texture2D" uid="uid://c8e85ium1tihd" path="res://Arts/céu com nuvem.jpg" id="2_oskho"]
+[ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_6308u"]
+[ext_resource type="TileSet" uid="uid://dxnfvcya0gyvj" path="res://Arts/tilemap.tres" id="3_qohyo"]
+[ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="6_ev5ef"]
+[ext_resource type="PackedScene" uid="uid://daimqumyvlrw2" path="res://base_level/cenas/espinho.tscn" id="6_i6141"]
+[ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="6_iborm"]
+[ext_resource type="PackedScene" uid="uid://8100emtt7r7d" path="res://base_level/cenas/pedra.tscn" id="6_usgxl"]
+[ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="11_nfurp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g3gid"]
+size = Vector2(382, 618)
+
+[node name="Level 1" type="Node2D"]
+process_mode = 1
+script = ExtResource("1_6f18c")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 38802.0
+offset_bottom = 2304.0
+scale = Vector2(0.28125, 0.28125)
+texture = ExtResource("2_oskho")
+stretch_mode = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 33)
+tile_set = ExtResource("3_qohyo")
+format = 2
+layer_0/tile_data = PackedInt32Array(589824, 0, 2, 589827, 65536, 0, 589829, 65536, 0, 589828, 0, 0, 589826, 0, 0, 589831, 65536, 1, 393223, 131072, 2, 393224, 131072, 2, 393225, 131072, 2, 196633, 131072, 0, 196634, 131072, 0, 196635, 131072, 0, 393247, 131072, 2, 393248, 131072, 2, 393246, 131072, 2, 196641, 131072, 0, 196642, 131072, 0, 196643, 131072, 0, 196644, 131072, 0, 393261, 131072, 2, 393262, 131072, 2, 393263, 131072, 2, 393264, 131072, 2, 393265, 131072, 2, 393221, 131072, 2, 393222, 131072, 2, 196618, 131072, 0, 196619, 131072, 0, 196620, 131072, 0, 589839, 0, 0, 589840, 65536, 0, 589841, 0, 0, 589842, 65536, 1, 589838, 65536, 2, 393236, 131072, 2, 393235, 131072, 2, 196625, 131072, 0, 196626, 131072, 0, 196627, 131072, 0, 589851, 65536, 2, 589852, 0, 0, 589854, 0, 0, 589856, 0, 0, 589858, 0, 0, 589859, 65536, 1, 589857, 65536, 0, 589855, 65536, 0, 589853, 65536, 0, 393243, 131072, 2, 393242, 131072, 2, 393237, 131072, 2, 393238, 131072, 2, 393256, 131072, 2, 393255, 131072, 2, 393260, 131072, 2, 589863, 0, 2, 589865, 0, 0, 589864, 65536, 0, 589866, 65536, 1, 589873, 65536, 2, 589874, 0, 0, 589876, 0, 0, 589878, 0, 0, 589877, 65536, 0, 589875, 65536, 0, 589879, 65536, 1, 589888, 0, 2, 589889, 65536, 0, 589891, 65536, 0, 589893, 65536, 1, 589892, 0, 0, 589890, 0, 0, 589897, 65536, 2, 589898, 0, 0, 589899, 65536, 1, 196650, 131072, 0, 196649, 131072, 0, 196648, 131072, 0, 196658, 131072, 0, 196659, 131072, 0, 196660, 131072, 0, 196661, 131072, 0, 196662, 131072, 0, 196668, 131072, 0, 196669, 131072, 0, 196670, 131072, 0, 196671, 131072, 0, 196672, 131072, 0, 196673, 131072, 0, 196681, 131072, 0, 196682, 131072, 0, 196683, 131072, 0, 393273, 131072, 2, 393274, 131072, 2, 393272, 131072, 2, 393271, 131072, 2, 393284, 131072, 2, 393285, 131072, 2, 393286, 131072, 2, 393287, 131072, 2, 393294, 131072, 2, 393295, 131072, 2, 393293, 131072, 2, 589905, 65536, 2, 589906, 0, 0, 589908, 0, 0, 589909, 65536, 1, 589907, 65536, 0, 393302, 131072, 2, 393303, 131072, 2, 196689, 131072, 0, 196690, 131072, 0, 196691, 131072, 0, 196692, 131072, 0, 196697, 131072, 0, 196698, 131072, 0, 196699, 131072, 0, 589920, 0, 2, 589921, 65536, 0, 589923, 65536, 0, 589925, 65536, 0, 589926, 0, 1, 589924, 0, 0, 589922, 0, 0, 589931, 65536, 2, 589932, 0, 0, 589934, 0, 0, 589935, 65536, 0, 589933, 65536, 0, 589936, 0, 1, 196726, 131072, 0, 196727, 131072, 0, 196728, 131072, 0, 589944, 0, 2, 589945, 65536, 0, 589946, 0, 0, 589947, 65536, 1, 589952, 65536, 2, 589953, 0, 0, 589954, 65536, 1, 589961, 0, 2, 589962, 65536, 0, 589964, 65536, 0, 589966, 65536, 0, 589968, 65536, 0, 589970, 65536, 0, 589972, 65536, 0, 589974, 65536, 0, 589976, 65536, 0, 589978, 65536, 0, 589963, 0, 0, 589965, 0, 0, 589967, 0, 0, 589969, 0, 0, 589971, 0, 0, 589973, 0, 0, 589975, 0, 0, 589977, 0, 0, 589979, 0, 0, -65366, 65536, 0, 170, 65536, 0, 65706, 65536, 0, 131242, 65536, 0, 196778, 65536, 0, 262314, 65536, 0, 327850, 65536, 0, 393386, 65536, 0, 458922, 65536, 0, 524458, 65536, 0, 589994, 65536, 0, 589980, 65536, 0, 589982, 65536, 0, 589984, 65536, 0, 589986, 65536, 0, 589988, 65536, 0, 589990, 65536, 0, 589992, 65536, 0, 589981, 0, 0, 589983, 0, 0, 589985, 0, 0, 589987, 0, 0, 589989, 0, 0, 589991, 0, 0, 589993, 0, 0, 393308, 131072, 2, 393309, 131072, 2, 393307, 131072, 2, 589913, 0, 2, 589914, 65536, 0, 589916, 65536, 1, 589915, 0, 0, 196706, 131072, 0, 196707, 131072, 0, 196708, 131072, 0, 393316, 131072, 2, 393317, 131072, 2, 393318, 131072, 2, 393319, 131072, 2, 393315, 131072, 2, 393324, 131072, 2, 393325, 131072, 2, 393326, 131072, 2, 196715, 131072, 0, 196716, 131072, 0, 196717, 131072, 0, 196718, 131072, 0, 196719, 131072, 0, 196720, 131072, 0, 393327, 131072, 2, 393331, 131072, 2, 393332, 131072, 2, 393333, 131072, 2, 393340, 131072, 2, 393341, 131072, 2, 393338, 131072, 2, 393339, 131072, 2, 196735, 131072, 0, 196736, 131072, 0, 196737, 131072, 0, 196738, 131072, 0, 196739, 131072, 0, 196740, 131072, 0, 589825, 65536, 0, 589830, 0, 0)
+
+[node name="CameraLevel" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_2do7q")
+
+[node name="PauseWindow" parent="CameraLevel" instance=ExtResource("3_6308u")]
+visible = false
+
+[node name="DeathWindow" parent="CameraLevel" instance=ExtResource("6_iborm")]
+visible = false
+
+[node name="WinWindow" parent="CameraLevel" instance=ExtResource("6_ev5ef")]
+visible = false
+
+[node name="Player" parent="." instance=ExtResource("2_iejf0")]
+position = Vector2(120, 544)
+
+[node name="VictoryArea" type="Area2D" parent="."]
+position = Vector2(-2925, 0)
+
+[node name="VicotryCollision" type="CollisionShape2D" parent="VictoryArea"]
+position = Vector2(12028, 313)
+shape = SubResource("RectangleShape2D_g3gid")
+
+[node name="Obstaculos" type="Node" parent="."]
+
+[node name="Espinho" parent="Obstaculos" instance=ExtResource("6_i6141")]
+position = Vector2(950, 396)
+
+[node name="Espinho2" parent="Obstaculos" instance=ExtResource("6_i6141")]
+position = Vector2(2373, 383)
+
+[node name="Espinho3" parent="Obstaculos" instance=ExtResource("6_i6141")]
+position = Vector2(3387, 533)
+
+[node name="Espinho4" parent="Obstaculos" instance=ExtResource("6_i6141")]
+position = Vector2(3727, 152)
+
+[node name="Espinho5" parent="Obstaculos" instance=ExtResource("6_i6141")]
+position = Vector2(5296, 521)
+
+[node name="Espinho6" parent="Obstaculos" instance=ExtResource("6_i6141")]
+position = Vector2(5547, 386)
+
+[node name="Espinho7" parent="Obstaculos" instance=ExtResource("6_i6141")]
+position = Vector2(6775, 529)
+
+[node name="Pedra" parent="Obstaculos" instance=ExtResource("6_usgxl")]
+position = Vector2(436, 582)
+
+[node name="Pedra2" parent="Obstaculos" instance=ExtResource("6_usgxl")]
+position = Vector2(2081, 385)
+
+[node name="Pedra3" parent="Obstaculos" instance=ExtResource("6_usgxl")]
+position = Vector2(2904, 389)
+
+[node name="Pedra4" parent="Obstaculos" instance=ExtResource("6_usgxl")]
+position = Vector2(4131, 578)
+
+[node name="Pedra5" parent="Obstaculos" instance=ExtResource("6_usgxl")]
+position = Vector2(4745, 192)
+
+[node name="Pedra6" parent="Obstaculos" instance=ExtResource("6_usgxl")]
+position = Vector2(6197, 581)
+
+[node name="Pedra7" parent="Obstaculos" instance=ExtResource("6_usgxl")]
+position = Vector2(7565, 194)
+
+[node name="Colecionaveis" type="Node" parent="."]
+
+[node name="Mixtape1" parent="Colecionaveis" instance=ExtResource("11_nfurp")]
+position = Vector2(2245, 156)
+
+[node name="Mixtape2" parent="Colecionaveis" instance=ExtResource("11_nfurp")]
+position = Vector2(5231, 292)
+
+[node name="Mixtape3" parent="Colecionaveis" instance=ExtResource("11_nfurp")]
+position = Vector2(7855, 220)
+
+[connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
+[connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
+[connection signal="body_entered" from="VictoryArea" to="CameraLevel" method="_on_victory_area_body_entered"]
+[connection signal="got_hit" from="Obstaculos/Espinho" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Espinho2" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Espinho3" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Espinho4" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Espinho5" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Espinho6" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Espinho7" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Pedra" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Pedra2" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Pedra3" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Pedra4" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Pedra5" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Pedra6" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Pedra7" to="." method="_on_got_hit"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape1" to="Colecionaveis/Mixtape1" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape1" to="." method="_on_mixtape_1_collected_mix"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape2" to="Colecionaveis/Mixtape2" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape2" to="." method="_on_mixtape_2_collected_mix"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape3" to="Colecionaveis/Mixtape3" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape3" to="." method="_on_mixtape_3_collected_mix"]

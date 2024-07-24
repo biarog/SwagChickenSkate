@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://4as28cbiv3oi"]
+
+[ext_resource type="Script" path="res://gui/scripts/death_window.gd" id="1_b56ns"]
+[ext_resource type="Script" path="res://gui/scripts/Restart_btn.gd" id="1_lo645"]
+[ext_resource type="PackedScene" uid="uid://duu18ax3r6re0" path="res://gui/cenas/change_scene_button.tscn" id="2_uicue"]
+[ext_resource type="Texture2D" uid="uid://bp301wgpx7dx6" path="res://Arts/lose.png" id="4_wuscn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c3hqf"]
+font_size = 30
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[node name="DeathWindow" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_b56ns")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 351.0
+offset_top = 174.0
+offset_right = 801.0
+offset_bottom = 474.0
+color = Color(1, 0.847059, 1, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -81.5
+offset_top = 16.0
+offset_right = 81.5
+offset_bottom = 58.0
+grow_horizontal = 2
+text = "You Died! :("
+label_settings = SubResource("LabelSettings_c3hqf")
+
+[node name="Restart_btn" type="Button" parent="ColorRect"]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 230.0
+offset_right = 149.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 25
+text = "Restart"
+script = ExtResource("1_lo645")
+
+[node name="LvlSelect_btn" parent="ColorRect" instance=ExtResource("2_uicue")]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 230.0
+offset_right = 421.0
+offset_bottom = 273.0
+theme_override_font_sizes/font_size = 25
+text = "Level Select"
+scene_path = "res://gui/cenas/level_select_screen.tscn"
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect"]
+position = Vector2(224, 154)
+scale = Vector2(0.0893555, 0.0893555)
+texture = ExtResource("4_wuscn")
+
+[connection signal="mouse_entered" from="ColorRect/Restart_btn" to="ColorRect/Restart_btn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ColorRect/Restart_btn" to="ColorRect/Restart_btn" method="_on_mouse_exited"]
+[connection signal="pressed" from="ColorRect/Restart_btn" to="." method="_on_restart_btn_pressed"]
