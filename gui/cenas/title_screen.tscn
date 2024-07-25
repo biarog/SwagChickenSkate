@@ -17,7 +17,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="MenuBackground" type="TextureRect" parent="."]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_ql86s")
 layout_mode = 0
