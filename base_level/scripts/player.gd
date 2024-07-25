@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var animation = $Sprite/AnimationPlayer
+
 const JUMP_VELOCITY = -615.0
 @export var SKATE_VELOCITY : float
 
@@ -11,9 +13,11 @@ func _physics_process(delta):
 	velocity.x = SKATE_VELOCITY
 	if not is_on_floor():
 		velocity.y += gravity * delta
-	
+		
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		animation.play("jump")
+		
 	move_and_slide()
 
 func _input(event : InputEvent):
