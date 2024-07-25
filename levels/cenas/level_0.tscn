@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://cfurubwla7y3n"]
 
-[ext_resource type="TileSet" uid="uid://dxnfvcya0gyvj" path="res://Arts/tilemap.tres" id="1_fl0a5"]
+[ext_resource type="TileSet" uid="uid://bvktyiydahqq2" path="res://Arts/tilemap.tres" id="1_fl0a5"]
 [ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_popjn"]
 [ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_51lvx"]
 [ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="4_swbx6"]
@@ -31,7 +31,6 @@ scale = Vector2(0.5, 0.5)
 [node name="DeathWindow" parent="CameraLevel" instance=ExtResource("4_swbx6")]
 
 [node name="WinWindow" parent="CameraLevel" instance=ExtResource("5_chh37")]
-process_mode = 2
 
 [node name="Player" parent="." instance=ExtResource("6_xc5iy")]
 position = Vector2(120, 544)
