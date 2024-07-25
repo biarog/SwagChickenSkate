@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_6f18c"]
 [ext_resource type="Script" path="res://levels/scripts/camera_level_1.gd" id="2_2do7q"]
 [ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="2_iejf0"]
-[ext_resource type="Texture2D" path="res://Arts/céu com nuvem.jpg" id="2_oskho"]
+[ext_resource type="Texture2D" uid="uid://c8e85ium1tihd" path="res://Arts/céu com nuvem.jpg" id="2_oskho"]
 [ext_resource type="PackedScene" path="res://gui/cenas/pause_window.tscn" id="3_6308u"]
 [ext_resource type="TileSet" uid="uid://bvktyiydahqq2" path="res://Arts/tilemap.tres" id="3_qohyo"]
 [ext_resource type="PackedScene" path="res://gui/cenas/win_window.tscn" id="6_ev5ef"]
