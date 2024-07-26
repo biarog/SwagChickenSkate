@@ -62,7 +62,6 @@ _data = {
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(77, 410)
-scale = Vector2(0.5, 0.5)
 script = ExtResource("1_6qs0b")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
