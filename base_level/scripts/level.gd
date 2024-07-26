@@ -39,7 +39,7 @@ func _on_player_exited_camera():
 		kill_player()
 
 
-
+#Vitoria do nivel
 func _on_victory_area_body_entered(body):
 	if body.name == 'Player':
 		win_condition = true

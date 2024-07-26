@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cfokyhmq17pmn"]
+[gd_scene load_steps=6 format=3 uid="uid://cfokyhmq17pmn"]
 
+[ext_resource type="Shader" path="res://gui/shaders/scroll.gdshader" id="1_biq8w"]
 [ext_resource type="PackedScene" uid="uid://duu18ax3r6re0" path="res://gui/cenas/change_scene_button.tscn" id="1_curq7"]
+[ext_resource type="Texture2D" uid="uid://dalbvgpac5pti" path="res://Arts/titulo_SCS.png" id="1_rfknh"]
+[ext_resource type="Texture2D" uid="uid://dwtebilwqmeq6" path="res://Arts/txtr_menu.png" id="2_ew058"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ql86s"]
+shader = ExtResource("1_biq8w")
+shader_parameter/speed = 0.1
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -10,34 +17,32 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Message" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -343.5
-offset_top = 102.0
-offset_right = 343.5
-offset_bottom = 201.0
-grow_horizontal = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_override_font_sizes/font_size = 72
-text = "Swag Chicken Skate"
+[node name="MenuBackground" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_ql86s")
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 644.0
+texture = ExtResource("2_ew058")
+stretch_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 160)
+texture = ExtResource("1_rfknh")
 
 [node name="StartButton" parent="." instance=ExtResource("1_curq7")]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = 1.0
 offset_left = -67.0
-offset_top = 73.0
+offset_top = -211.0
 offset_right = 67.0
-offset_bottom = 148.0
+offset_bottom = -136.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 pivot_offset = Vector2(68, 37)
 theme_override_font_sizes/font_size = 48
 text = "Start!"
