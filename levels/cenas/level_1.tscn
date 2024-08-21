@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dorbqfhfmckjk"]
+[gd_scene load_steps=14 format=3 uid="uid://dorbqfhfmckjk"]
 
 [ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_6f18c"]
 [ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="2_iejf0"]
-[ext_resource type="Texture2D" uid="uid://c8e85ium1tihd" path="res://Arts/céu com nuvem.jpg" id="2_oskho"]
+[ext_resource type="Texture2D" uid="uid://ddf1omet53eud" path="res://Arts/background_nuvens_lineart.jpg" id="2_xjqvs"]
 [ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_6308u"]
+[ext_resource type="Texture2D" uid="uid://gd01r2hirbbc" path="res://Arts/background_colinas_temp.png" id="3_jq38y"]
 [ext_resource type="TileSet" uid="uid://bvktyiydahqq2" path="res://Arts/tilemap.tres" id="3_qohyo"]
+[ext_resource type="Texture2D" uid="uid://ts7vvnd81ikd" path="res://Arts/galinheiro.png" id="4_x57uy"]
 [ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="6_ev5ef"]
 [ext_resource type="PackedScene" uid="uid://daimqumyvlrw2" path="res://base_level/cenas/espinho.tscn" id="6_i6141"]
 [ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="6_iborm"]
@@ -17,13 +19,33 @@ size = Vector2(382, 618)
 [node name="Level 1" type="Node2D"]
 process_mode = 1
 script = ExtResource("1_6f18c")
+metadata/_edit_horizontal_guides_ = [-3.0]
 
-[node name="Background" type="TextureRect" parent="."]
-offset_right = 38802.0
-offset_bottom = 2304.0
-scale = Vector2(0.28125, 0.28125)
-texture = ExtResource("2_oskho")
-stretch_mode = 1
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
+texture = ExtResource("2_xjqvs")
+centered = false
+
+[node name="background" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Colinas" type="Sprite2D" parent="ParallaxBackground/background"]
+texture = ExtResource("3_jq38y")
+centered = false
+
+[node name="Galinheiro" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="galinheiro" type="Sprite2D" parent="ParallaxBackground/Galinheiro"]
+position = Vector2(287, 245)
+texture = ExtResource("4_x57uy")
+centered = false
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, 33)
@@ -36,10 +58,13 @@ position = Vector2(576, 324)
 scale = Vector2(0.5, 0.5)
 
 [node name="PauseWindow" parent="CameraLevel" instance=ExtResource("3_6308u")]
+visible = false
 
 [node name="DeathWindow" parent="CameraLevel" instance=ExtResource("6_iborm")]
+visible = false
 
 [node name="WinWindow" parent="CameraLevel" instance=ExtResource("6_ev5ef")]
+visible = false
 
 [node name="Player" parent="." instance=ExtResource("2_iejf0")]
 position = Vector2(120, 544)

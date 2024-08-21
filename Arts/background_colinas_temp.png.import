@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwlixutajwl35"
-path="res://.godot/imported/céu com nuvem e lineart.jpg-fd0aad72081a82aea6667dfc7469a0a8.ctex"
+uid="uid://gd01r2hirbbc"
+path="res://.godot/imported/background_colinas_temp.png-3aca5a8af38dc55ad4470f7b55881c5b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/céu com nuvem e lineart.jpg"
-dest_files=["res://.godot/imported/céu com nuvem e lineart.jpg-fd0aad72081a82aea6667dfc7469a0a8.ctex"]
+source_file="res://Arts/background_colinas_temp.png"
+dest_files=["res://.godot/imported/background_colinas_temp.png-3aca5a8af38dc55ad4470f7b55881c5b.ctex"]
 
 [params]
 
