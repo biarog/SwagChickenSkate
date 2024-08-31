@@ -11,9 +11,12 @@ var lvl_number : int
 
 @onready var node_player = get_node("Player")
 @onready var node_cam = get_node("CameraLevel")
+@onready var node_progress_bar = get_node("CameraLevel/BarraProgresso")
 
 func _ready():
 	lvl_number = get_tree().get_current_scene().get_name().trim_prefix("Level ").to_int() - 1
+	node_progress_bar.set("min_value", get_node("InicioLVL").position.x)
+	node_progress_bar.set("max_value", get_node("FinalLVL").position.x)
 	
 	for i in 3:
 		mixtapes[i] = playerData.lvl_Mixtapes[lvl_number][i+1]
@@ -25,6 +28,9 @@ func _ready():
 func _physics_process(delta):
 	if !win_condition:
 		node_cam.position.x += node_player.SKATE_VELOCITY * delta
+	
+	node_progress_bar.set("value", node_player.position.x)
+	
 
 #Relacionado a mortes
 func kill_player():
