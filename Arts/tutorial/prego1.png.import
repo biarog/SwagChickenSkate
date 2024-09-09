@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://7w1j0h653a01"
-path="res://.godot/imported/SWAG CHICKEN EGG WOW.png-af78f293588a55e58f70f7b8ff3c960f.ctex"
+uid="uid://bwvi1fr6kas6e"
+path="res://.godot/imported/prego1.png-43357cb3a52bce710b47d7d017a7d5ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/SWAG CHICKEN EGG WOW.png"
-dest_files=["res://.godot/imported/SWAG CHICKEN EGG WOW.png-af78f293588a55e58f70f7b8ff3c960f.ctex"]
+source_file="res://Arts/tutorial/prego1.png"
+dest_files=["res://.godot/imported/prego1.png-43357cb3a52bce710b47d7d017a7d5ab.ctex"]
 
 [params]
 

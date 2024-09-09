@@ -1,0 +1,144 @@
+[gd_scene load_steps=15 format=3 uid="uid://cfurubwla7y3n"]
+
+[ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_popjn"]
+[ext_resource type="Texture2D" uid="uid://o35o2tpf55oo" path="res://Arts/background_tutorial.png" id="2_inl7q"]
+[ext_resource type="Texture2D" uid="uid://droj2gn1da34l" path="res://Arts/tilemap_tutorial.png" id="2_v6ces"]
+[ext_resource type="Texture2D" uid="uid://dscskliyk4vtg" path="res://Arts/background_tutorial2.png" id="3_42t5b"]
+[ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_51lvx"]
+[ext_resource type="Texture2D" uid="uid://c3gv3334wc8ex" path="res://Arts/pgb1.png" id="3_kc1cn"]
+[ext_resource type="Texture2D" uid="uid://dvgayt66k1plv" path="res://Arts/pgb2.png" id="4_cu0lo"]
+[ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="4_swbx6"]
+[ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="5_chh37"]
+[ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="6_xc5iy"]
+[ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="9_g2cpl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p10bd"]
+texture = ExtResource("2_v6ces")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.3333, -32, -21.3333)
+1:0/0/physics_layer_0/polygon_0/one_way = true
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.3333, -32, -21.3333)
+2:0/0/physics_layer_0/polygon_0/one_way = true
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.3333, -32, -21.3333)
+1:1/0/physics_layer_0/polygon_0/one_way = true
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.3333, -32, -21.3333)
+2:1/0/physics_layer_0/polygon_0/one_way = true
+
+[sub_resource type="TileSet" id="TileSet_0yx61"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/3 = SubResource("TileSetAtlasSource_p10bd")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0t6uf"]
+size = Vector2(382, 618)
+
+[node name="Level 0" type="Node2D"]
+script = ExtResource("1_popjn")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="FundoGalinheiro" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="SpriteFundoGalinheiro" type="Sprite2D" parent="ParallaxBackground/FundoGalinheiro"]
+position = Vector2(576, 324)
+texture = ExtResource("2_inl7q")
+
+[node name="FundoNivel" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="SpriteFundoNivel" type="Sprite2D" parent="ParallaxBackground/FundoNivel"]
+position = Vector2(576, 325)
+texture = ExtResource("3_42t5b")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 39)
+tile_set = SubResource("TileSet_0yx61")
+rendering_quadrant_size = 64
+format = 2
+layer_0/tile_data = PackedInt32Array(589828, 3, 0, 589827, 3, 0, 589826, 3, 0, 589825, 3, 0, 589824, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 589841, 3, 0, 589842, 3, 0, 589843, 3, 0, 589844, 3, 0, 589845, 3, 0, 589846, 3, 0, 589847, 3, 0, 589848, 3, 0, 589849, 3, 0, 589850, 3, 0, 589851, 3, 0, 589852, 3, 0, 589853, 3, 0, 589854, 3, 0, 589855, 3, 0, 589856, 3, 0, 589857, 3, 0, 589858, 3, 0, 589859, 3, 0, 589860, 3, 0, 589861, 3, 0, 589862, 3, 0, 589863, 3, 0, 589864, 3, 0, 589865, 3, 0, 393235, 131075, 0, 393236, 131075, 0, 393237, 131075, 0, 393238, 131075, 0, 393239, 131075, 0, 393240, 131075, 0, 196634, 65539, 1, 196636, 131075, 1, 196637, 131075, 1, 196638, 131075, 1, 196639, 65539, 268435457, 393249, 65539, 0, 393250, 131075, 0, 393251, 131075, 0, 393252, 131075, 0, 393253, 65539, 268435456, 196650, 131075, 1, 196651, 131075, 1, 196652, 131075, 1, 196653, 131075, 1, 196654, 131075, 1, 196655, 65539, 268435457, 196623, 131075, 1, 196622, 131075, 1, 196621, 131075, 1, 196620, 131075, 1, 196619, 131075, 1, 196618, 65539, 1, 393230, 131075, 0, 393229, 131075, 0, 393228, 131075, 0, 393227, 131075, 0, 393226, 131075, 0, 393225, 65539, 0, 393231, 131075, 0, 393232, 131075, 0, 393233, 131075, 0, 196625, 65539, 268435457, 196624, 131075, 1, 393234, 131075, 0, 589873, 3, 0, 589874, 3, 0, 589875, 3, 0, 589876, 3, 0, 589877, 3, 0, 589878, 3, 0, 589870, 3, 0, 589871, 3, 0, 589872, 3, 0, 589890, 3, 0, 589891, 3, 0, 589892, 3, 0, 589879, 3, 0, 589880, 3, 0, 589881, 3, 0, 589882, 3, 0, 589883, 3, 0, 589884, 3, 0, 589885, 3, 0, 589886, 3, 0, 589887, 3, 0, 589888, 3, 0, 589889, 3, 0, 196649, 65539, 1, 196635, 131075, 1, 393241, 65539, 268435456)
+
+[node name="InicioLVL" type="Marker2D" parent="."]
+position = Vector2(119, 544)
+
+[node name="FinalLVL" type="Marker2D" parent="."]
+position = Vector2(4000, 508)
+
+[node name="CameraLevel" type="Camera2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.5, 0.5)
+
+[node name="BarraProgresso" type="TextureProgressBar" parent="CameraLevel"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -310.25
+offset_top = -564.0
+offset_right = 84.75
+offset_bottom = -532.0
+grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
+pivot_offset = Vector2(192.5, 16)
+size_flags_horizontal = 4
+value = 50.0
+texture_under = ExtResource("3_kc1cn")
+texture_progress = ExtResource("4_cu0lo")
+texture_progress_offset = Vector2(6.5, 5)
+
+[node name="PauseWindow" parent="CameraLevel" instance=ExtResource("3_51lvx")]
+
+[node name="DeathWindow" parent="CameraLevel" instance=ExtResource("4_swbx6")]
+
+[node name="WinWindow" parent="CameraLevel" instance=ExtResource("5_chh37")]
+
+[node name="Player" parent="." instance=ExtResource("6_xc5iy")]
+position = Vector2(120, 544)
+scale = Vector2(0.5, 0.5)
+SKATE_VELOCITY = 225.0
+
+[node name="VictoryArea" type="Area2D" parent="."]
+position = Vector2(-7836, 0)
+
+[node name="VicotryCollision" type="CollisionShape2D" parent="VictoryArea"]
+position = Vector2(12028, 313)
+shape = SubResource("RectangleShape2D_0t6uf")
+
+[node name="Obstaculos" type="Node" parent="."]
+
+[node name="Colecionaveis" type="Node" parent="."]
+
+[node name="Mixtape1" parent="Colecionaveis" instance=ExtResource("9_g2cpl")]
+position = Vector2(1848, 132)
+
+[node name="Mixtape2" parent="Colecionaveis" instance=ExtResource("9_g2cpl")]
+position = Vector2(2879, 147)
+
+[node name="Mixtape3" parent="Colecionaveis" instance=ExtResource("9_g2cpl")]
+position = Vector2(3525, 528)
+
+[connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
+[connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape1" to="Colecionaveis/Mixtape1" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape1" to="." method="_on_mixtape_1_collected_mix"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape2" to="Colecionaveis/Mixtape2" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape2" to="." method="_on_mixtape_2_collected_mix"]
+[connection signal="area_entered" from="Colecionaveis/Mixtape3" to="Colecionaveis/Mixtape3" method="_on_area_entered"]
+[connection signal="collected_mix" from="Colecionaveis/Mixtape3" to="." method="_on_mixtape_3_collected_mix"]

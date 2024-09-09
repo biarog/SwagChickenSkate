@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmnemsi8iflp6"
-path="res://.godot/imported/CALMA.jpeg-a72bc403e4005ec796fed8dd83df5ed1.ctex"
+uid="uid://c3gv3334wc8ex"
+path="res://.godot/imported/pgb1.png-68b2f3a316b8d0143d92687cb5fef3cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/CALMA.jpeg"
-dest_files=["res://.godot/imported/CALMA.jpeg-a72bc403e4005ec796fed8dd83df5ed1.ctex"]
+source_file="res://Arts/pgb1.png"
+dest_files=["res://.godot/imported/pgb1.png-68b2f3a316b8d0143d92687cb5fef3cb.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bppq6bu2gtpjy"
-path="res://.godot/imported/bonezinho maroto.png-79d40bd997ff6cd1b63664ee10753630.ctex"
+uid="uid://o35o2tpf55oo"
+path="res://.godot/imported/background_tutorial.png-493a540ee5c3389bf41f7adec7dc996f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/bonezinho maroto.png"
-dest_files=["res://.godot/imported/bonezinho maroto.png-79d40bd997ff6cd1b63664ee10753630.ctex"]
+source_file="res://Arts/tutorial/background_tutorial.png"
+dest_files=["res://.godot/imported/background_tutorial.png-493a540ee5c3389bf41f7adec7dc996f.ctex"]
 
 [params]
 

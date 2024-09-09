@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8emmqoiyviqq"]
+
+[ext_resource type="Texture2D" uid="uid://bmufvu6f325hr" path="res://Arts/tutorial/prego3.png" id="1_bxxdq"]
+[ext_resource type="Script" path="res://base_level/scripts/obstaculo.gd" id="1_i0fvg"]
+
+[node name="Prego3" type="Area2D"]
+script = ExtResource("1_i0fvg")
+
+[node name="DesenhoPrego3" type="Sprite2D" parent="."]
+rotation = -0.231867
+scale = Vector2(0.624038, 0.624038)
+texture = ExtResource("1_bxxdq")
+
+[node name="ColisaoPrego3" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(31, 74, -16, -31, -9, -49, -24, -78, -65, -95, 8, 83, -11, 101, 0, 110, 59, 98, 57, 83)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

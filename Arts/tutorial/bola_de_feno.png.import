@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyp11fnjtqkg8"
-path="res://.godot/imported/correntinha do drip.png-07642cc224b4c5e8801658fc0a85d469.ctex"
+uid="uid://byu1u5ef06q36"
+path="res://.godot/imported/bola_de_feno.png-cffd2370ac1bb1af69efadad4c7a7c6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/correntinha do drip.png"
-dest_files=["res://.godot/imported/correntinha do drip.png-07642cc224b4c5e8801658fc0a85d469.ctex"]
+source_file="res://Arts/tutorial/bola_de_feno.png"
+dest_files=["res://.godot/imported/bola_de_feno.png-cffd2370ac1bb1af69efadad4c7a7c6f.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1esn3qp4dovi"
-path="res://.godot/imported/ovo frito.png-cb2bfee92d040512d391bc2d74f64122.ctex"
+uid="uid://dyrft24ty7pqo"
+path="res://.godot/imported/prego2.png-71be91c761735f064b87555b5b0ea70b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/ovo frito.png"
-dest_files=["res://.godot/imported/ovo frito.png-cb2bfee92d040512d391bc2d74f64122.ctex"]
+source_file="res://Arts/tutorial/prego2.png"
+dest_files=["res://.godot/imported/prego2.png-71be91c761735f064b87555b5b0ea70b.ctex"]
 
 [params]
 

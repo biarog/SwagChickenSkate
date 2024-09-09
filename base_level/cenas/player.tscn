@@ -79,7 +79,7 @@ shape = SubResource("CapsuleShape2D_4oe1x")
 polygon = PackedVector2Array(10, -128, -16, -124, -38, -98, -46, -76, -62, -36, -82, -46, -78, -28, -66, -14, -64, 26, -50, 58, -64, 82, -102, 88, -106, 110, -94, 114, 90, 112, 114, 86, 102, 72, 54, 72, 42, 50, 50, 26, 58, -12, 78, -30, 80, -40, 56, -32, 56, -52, 64, -64, 34, -114)
 
 [node name="Sprite" type="Sprite2D" parent="."]
-position = Vector2(-11, 5)
+position = Vector2(2, -18)
 scale = Vector2(0.578125, 0.567149)
 texture = ExtResource("2_gxkt3")
 hframes = 2

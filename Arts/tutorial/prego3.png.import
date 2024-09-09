@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh7tqwpuh3egp"
-path="res://.godot/imported/chain chicken egg.png-2cf2e2acd182250c9d53b7220b7c7807.ctex"
+uid="uid://bmufvu6f325hr"
+path="res://.godot/imported/prego3.png-8994716d2b7bd8ec0974596b4fab99c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/chain chicken egg.png"
-dest_files=["res://.godot/imported/chain chicken egg.png-2cf2e2acd182250c9d53b7220b7c7807.ctex"]
+source_file="res://Arts/tutorial/prego3.png"
+dest_files=["res://.godot/imported/prego3.png-8994716d2b7bd8ec0974596b4fab99c4.ctex"]
 
 [params]
 
