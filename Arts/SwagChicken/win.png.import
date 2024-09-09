@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0edhw7sviwr8"
-path="res://.godot/imported/SWAG CHICKEN SKATE.png-23a22b25eefe5dac8bd65b08da3fcd4c.ctex"
+uid="uid://rtwr8nai0roy"
+path="res://.godot/imported/win.png-cb29345c3fef9d3f7b0c41947fb3a09c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/SWAG CHICKEN SKATE.png"
-dest_files=["res://.godot/imported/SWAG CHICKEN SKATE.png-23a22b25eefe5dac8bd65b08da3fcd4c.ctex"]
+source_file="res://Arts/SwagChicken/win.png"
+dest_files=["res://.godot/imported/win.png-cb29345c3fef9d3f7b0c41947fb3a09c.ctex"]
 
 [params]
 

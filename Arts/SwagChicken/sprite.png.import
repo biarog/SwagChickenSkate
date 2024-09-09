@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dalbvgpac5pti"
-path="res://.godot/imported/titulo_SCS.png-c5edd02f281bb12aa2191fa6e1e6d271.ctex"
+uid="uid://cpx4jnhwvjn3u"
+path="res://.godot/imported/sprite.png-7ac356f445474d39ea5dcdfae914f2f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/titulo_SCS.png"
-dest_files=["res://.godot/imported/titulo_SCS.png-c5edd02f281bb12aa2191fa6e1e6d271.ctex"]
+source_file="res://Arts/SwagChicken/sprite.png"
+dest_files=["res://.godot/imported/sprite.png-7ac356f445474d39ea5dcdfae914f2f8.ctex"]
 
 [params]
 

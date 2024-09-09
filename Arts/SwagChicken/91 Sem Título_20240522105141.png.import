@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpj2yt7e8aqi0"
-path="res://.godot/imported/a_mimir.png-312ac278c01fd080dc0912d964e3ae1e.ctex"
+uid="uid://buwiw67eda72"
+path="res://.godot/imported/91 Sem Título_20240522105141.png-d06efad0843a95020c16df1adcefe496.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/a_mimir.png"
-dest_files=["res://.godot/imported/a_mimir.png-312ac278c01fd080dc0912d964e3ae1e.ctex"]
+source_file="res://Arts/SwagChicken/91 Sem Título_20240522105141.png"
+dest_files=["res://.godot/imported/91 Sem Título_20240522105141.png-d06efad0843a95020c16df1adcefe496.ctex"]
 
 [params]
 

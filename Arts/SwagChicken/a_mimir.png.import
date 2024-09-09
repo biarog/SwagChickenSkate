@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmufvu6f325hr"
-path="res://.godot/imported/prego3.png-8994716d2b7bd8ec0974596b4fab99c4.ctex"
+uid="uid://dpj2yt7e8aqi0"
+path="res://.godot/imported/a_mimir.png-0502810fe83fd14ef889ece24c44fb97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/tutorial/prego3.png"
-dest_files=["res://.godot/imported/prego3.png-8994716d2b7bd8ec0974596b4fab99c4.ctex"]
+source_file="res://Arts/SwagChicken/a_mimir.png"
+dest_files=["res://.godot/imported/a_mimir.png-0502810fe83fd14ef889ece24c44fb97.ctex"]
 
 [params]
 

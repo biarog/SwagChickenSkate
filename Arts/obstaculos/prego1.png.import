@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctpui0yabiv3t"
-path="res://.godot/imported/91 Sem Título_20240522104515.png-62a810043ebb7d613925aa9da6c6dfcd.ctex"
+uid="uid://bwvi1fr6kas6e"
+path="res://.godot/imported/prego1.png-91beebf438119fcfdab319a7f103342e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/91 Sem Título_20240522104515.png"
-dest_files=["res://.godot/imported/91 Sem Título_20240522104515.png-62a810043ebb7d613925aa9da6c6dfcd.ctex"]
+source_file="res://Arts/obstaculos/prego1.png"
+dest_files=["res://.godot/imported/prego1.png-91beebf438119fcfdab319a7f103342e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bp301wgpx7dx6"
-path="res://.godot/imported/lose.png-13f8df33c12e4fcba119d329e313d6f1.ctex"
+uid="uid://ctpui0yabiv3t"
+path="res://.godot/imported/91 Sem Título_20240522104515.png-50c4e0ef474a8d6cd07b44bf06eb8aa3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/lose.png"
-dest_files=["res://.godot/imported/lose.png-13f8df33c12e4fcba119d329e313d6f1.ctex"]
+source_file="res://Arts/SwagChicken/91 Sem Título_20240522104515.png"
+dest_files=["res://.godot/imported/91 Sem Título_20240522104515.png-50c4e0ef474a8d6cd07b44bf06eb8aa3.ctex"]
 
 [params]
 

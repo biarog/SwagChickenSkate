@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5i5s1ef8n50j"
-path="res://.godot/imported/espinhos.png-66e3135013e43bc98a09075b0678dd8c.ctex"
+uid="uid://xhs8wybs246k"
+path="res://.godot/imported/91 Sem Título_20240522105200.png-cb7cae960f7e519f0f870ac9f269b9e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/espinhos.png"
-dest_files=["res://.godot/imported/espinhos.png-66e3135013e43bc98a09075b0678dd8c.ctex"]
+source_file="res://Arts/SwagChicken/91 Sem Título_20240522105200.png"
+dest_files=["res://.godot/imported/91 Sem Título_20240522105200.png-cb7cae960f7e519f0f870ac9f269b9e5.ctex"]
 
 [params]
 

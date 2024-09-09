@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xhs8wybs246k"
-path="res://.godot/imported/91 Sem Título_20240522105200.png-c024fa6fb337ea7ee8817bf2ed448b1f.ctex"
+uid="uid://dwtebilwqmeq6"
+path="res://.godot/imported/txtr_menu.png-ad8fb836b5a5dde151628c863ec86097.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/91 Sem Título_20240522105200.png"
-dest_files=["res://.godot/imported/91 Sem Título_20240522105200.png-c024fa6fb337ea7ee8817bf2ed448b1f.ctex"]
+source_file="res://Arts/GUI/txtr_menu.png"
+dest_files=["res://.godot/imported/txtr_menu.png-ad8fb836b5a5dde151628c863ec86097.ctex"]
 
 [params]
 

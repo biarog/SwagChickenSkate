@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rtwr8nai0roy"
-path="res://.godot/imported/win.png-304d5f4aa7db469346f8e42f787c96fe.ctex"
+uid="uid://byu1u5ef06q36"
+path="res://.godot/imported/bola_de_feno.png-a3bc4c0110fc3ce794219f2acce25259.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/win.png"
-dest_files=["res://.godot/imported/win.png-304d5f4aa7db469346f8e42f787c96fe.ctex"]
+source_file="res://Arts/obstaculos/bola_de_feno.png"
+dest_files=["res://.godot/imported/bola_de_feno.png-a3bc4c0110fc3ce794219f2acce25259.ctex"]
 
 [params]
 

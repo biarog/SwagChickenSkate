@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfclaid2aylhv"
-path="res://.godot/imported/pedra.png-a800c1ecbbe2499b882e8dc34749e2f2.ctex"
+uid="uid://5i5s1ef8n50j"
+path="res://.godot/imported/espinhos.png-23fcaaa46cbcee1d68cb587b7d87ce8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/pedra.png"
-dest_files=["res://.godot/imported/pedra.png-a800c1ecbbe2499b882e8dc34749e2f2.ctex"]
+source_file="res://Arts/obstaculos/espinhos.png"
+dest_files=["res://.godot/imported/espinhos.png-23fcaaa46cbcee1d68cb587b7d87ce8a.ctex"]
 
 [params]
 
