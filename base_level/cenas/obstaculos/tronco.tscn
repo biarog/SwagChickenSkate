@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8byde8de28rd"]
+
+[ext_resource type="Texture2D" uid="uid://deo2oteiq0jws" path="res://Arts/obstaculos/tronco.png" id="1_5io2j"]
+
+[node name="Tronco" type="Area2D"]
+
+[node name="DesenhoTronco" type="Sprite2D" parent="."]
+texture = ExtResource("1_5io2j")
+
+[node name="ColisaoTronco" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-751, -42, -674, 275, -795, 548, -1214, 821, -1277, 1082, -776, 1301, 661, 1358, 1162, 964, 1088, 581, 1323, -735, 823, -779, 745, -64, 94, -347, -641, -171)

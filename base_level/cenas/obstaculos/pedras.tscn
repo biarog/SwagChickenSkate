@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dwn4xvfgi8pvp"]
+
+[ext_resource type="Texture2D" uid="uid://ce5cu80pdhpc0" path="res://Arts/obstaculos/pedras.png" id="1_73gcy"]
+
+[node name="Pedras" type="Area2D"]
+
+[node name="DesenhoPedras" type="Sprite2D" parent="."]
+position = Vector2(-4, 18)
+texture = ExtResource("1_73gcy")
+
+[node name="ColisaoPedras" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-927, 1210, -851, 1064, -545, 859, -289, 776, 301, 895, 722, 1020, 934, 1153, 932, 1293, -880, 1303)

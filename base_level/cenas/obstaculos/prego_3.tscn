@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8emmqoiyviqq"]
 
-[ext_resource type="Texture2D" uid="uid://bmufvu6f325hr" path="res://Arts/tutorial/prego3.png" id="1_bxxdq"]
+[ext_resource type="Texture2D" uid="uid://bmufvu6f325hr" path="res://Arts/obstaculos/prego3.png" id="1_bxxdq"]
 [ext_resource type="Script" path="res://base_level/scripts/obstaculo.gd" id="1_i0fvg"]
 
 [node name="Prego3" type="Area2D"]

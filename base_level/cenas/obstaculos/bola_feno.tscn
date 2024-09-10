@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://88rc5uefcbrx"]
 
-[ext_resource type="Texture2D" uid="uid://byu1u5ef06q36" path="res://Arts/tutorial/bola_de_feno.png" id="1_dudrm"]
+[ext_resource type="Texture2D" uid="uid://byu1u5ef06q36" path="res://Arts/obstaculos/bola_de_feno.png" id="1_dudrm"]
 [ext_resource type="Script" path="res://base_level/scripts/obstaculo.gd" id="1_rkrln"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_uae3d"]

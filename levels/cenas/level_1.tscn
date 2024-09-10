@@ -81,6 +81,7 @@ value = 50.0
 texture_under = ExtResource("6_cctkw")
 texture_progress = ExtResource("7_0d1b2")
 texture_progress_offset = Vector2(6.5, 5)
+metadata/_edit_use_anchors_ = true
 
 [node name="PauseWindow" parent="CameraLevel" instance=ExtResource("3_6308u")]
 

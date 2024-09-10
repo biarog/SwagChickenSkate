@@ -5,7 +5,8 @@ class_name PlayerData
 
 #Vetores com colecionaveis coletados
 @export var lvl_Mixtapes = [[1, false, false, false], 
-							[2, false, false, false]]
+							[2, false, false, false],
+							[3, false, false, false]]
 
 
 func update_qntd_mixtapes() -> void:

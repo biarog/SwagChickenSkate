@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy6bay1jyeekj"]
+
+[ext_resource type="Texture2D" uid="uid://cgoqowmimyprh" path="res://Arts/obstaculos/arbusto.png" id="1_n2a7c"]
+
+[node name="Arbusto" type="Area2D"]
+
+[node name="DesenhoArbusto" type="Sprite2D" parent="."]
+texture = ExtResource("1_n2a7c")
+
+[node name="ColisaoArbusto" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-1257, 1079, -1159, 755, -955, 467, -319, 97, 505, -47, 838, 124, 1100, 474, 1265, 864, 1275, 1200, 1013, 1302, -978, 1375)
