@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8byde8de28rd"]
+
+[ext_resource type="Texture2D" uid="uid://deo2oteiq0jws" path="res://Arts/obstaculos/tronco.png" id="1_5io2j"]
+[ext_resource type="Script" path="res://base_level/scripts/obstaculo.gd" id="1_20iyi"]
+
+[node name="Tronco" type="Area2D"]
+scale = Vector2(0.05, 0.05)
+script = ExtResource("1_20iyi")
+
+[node name="DesenhoTronco" type="Sprite2D" parent="."]
+texture = ExtResource("1_5io2j")
+
+[node name="ColisaoTronco" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-751, -42, -674, 275, -795, 548, -1214, 821, -1277, 1082, -776, 1301, 661, 1358, 1162, 964, 1088, 581, 1333, -737, 823, -779, 745, -64, 94, -347, -641, -171)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

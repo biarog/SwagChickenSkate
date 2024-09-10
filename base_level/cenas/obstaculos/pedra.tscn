@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://8100emtt7r7d"]
 
 [ext_resource type="Script" path="res://base_level/scripts/obstaculo.gd" id="1_naqmi"]
-[ext_resource type="Texture2D" uid="uid://bfclaid2aylhv" path="res://Arts/pedra.png" id="2_v00eg"]
+[ext_resource type="Texture2D" uid="uid://bfclaid2aylhv" path="res://Arts/obstaculos/pedra.png" id="2_v00eg"]
 
 [node name="Pedra" type="Area2D"]
 script = ExtResource("1_naqmi")
