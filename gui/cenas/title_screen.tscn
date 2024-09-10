@@ -2,8 +2,8 @@
 
 [ext_resource type="Shader" path="res://gui/shaders/scroll.gdshader" id="1_biq8w"]
 [ext_resource type="PackedScene" uid="uid://duu18ax3r6re0" path="res://gui/cenas/change_scene_button.tscn" id="1_curq7"]
-[ext_resource type="Texture2D" uid="uid://dalbvgpac5pti" path="res://Arts/titulo_SCS.png" id="1_rfknh"]
-[ext_resource type="Texture2D" uid="uid://dwtebilwqmeq6" path="res://Arts/txtr_menu.png" id="2_ew058"]
+[ext_resource type="Texture2D" uid="uid://dalbvgpac5pti" path="res://Arts/GUI/titulo_SCS.png" id="1_rfknh"]
+[ext_resource type="Texture2D" uid="uid://dwtebilwqmeq6" path="res://Arts/GUI/txtr_menu.png" id="2_ew058"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_ql86s"]
 shader = ExtResource("1_biq8w")

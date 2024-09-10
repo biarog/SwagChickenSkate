@@ -1,19 +1,19 @@
 [gd_scene load_steps=15 format=3 uid="uid://cfurubwla7y3n"]
 
-[ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_ee46n"]
-[ext_resource type="Texture2D" uid="uid://o35o2tpf55oo" path="res://Arts/tutorial/background_tutorial.png" id="2_qjfgn"]
-[ext_resource type="Texture2D" uid="uid://dscskliyk4vtg" path="res://Arts/tutorial/background_tutorial2.png" id="3_nmhhd"]
-[ext_resource type="Texture2D" uid="uid://droj2gn1da34l" path="res://Arts/tutorial/tilemap_tutorial.png" id="4_6hds3"]
-[ext_resource type="Texture2D" uid="uid://c3gv3334wc8ex" path="res://Arts/GUI/pgb1.png" id="5_ciysb"]
-[ext_resource type="Texture2D" uid="uid://dvgayt66k1plv" path="res://Arts/GUI/pgb2.png" id="6_7my8d"]
-[ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="7_b7djm"]
-[ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="8_qv2s2"]
-[ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="9_nbnlc"]
-[ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="10_6tewm"]
-[ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="11_mhxon"]
+[ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_dxoo0"]
+[ext_resource type="Texture2D" uid="uid://o35o2tpf55oo" path="res://Arts/tutorial/background_tutorial.png" id="2_eft6i"]
+[ext_resource type="Texture2D" uid="uid://dscskliyk4vtg" path="res://Arts/tutorial/background_tutorial2.png" id="3_puijk"]
+[ext_resource type="Texture2D" uid="uid://droj2gn1da34l" path="res://Arts/tutorial/tilemap_tutorial.png" id="4_mgowo"]
+[ext_resource type="Texture2D" uid="uid://c3gv3334wc8ex" path="res://Arts/GUI/pgb1.png" id="5_uqk0h"]
+[ext_resource type="Texture2D" uid="uid://dvgayt66k1plv" path="res://Arts/GUI/pgb2.png" id="6_p7tiu"]
+[ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="7_u2tdp"]
+[ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="8_jg5vl"]
+[ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="9_w8cbq"]
+[ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="10_klx11"]
+[ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="11_bnlic"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p10bd"]
-texture = ExtResource("4_6hds3")
+texture = ExtResource("4_mgowo")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -49,7 +49,7 @@ sources/3 = SubResource("TileSetAtlasSource_p10bd")
 size = Vector2(382, 618)
 
 [node name="Level 0" type="Node2D"]
-script = ExtResource("1_ee46n")
+script = ExtResource("1_dxoo0")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -59,7 +59,7 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="SpriteFundoGalinheiro" type="Sprite2D" parent="ParallaxBackground/FundoGalinheiro"]
 position = Vector2(576, 324)
-texture = ExtResource("2_qjfgn")
+texture = ExtResource("2_eft6i")
 
 [node name="FundoNivel" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.7, 0.7)
@@ -67,7 +67,7 @@ motion_mirroring = Vector2(1152, 0)
 
 [node name="SpriteFundoNivel" type="Sprite2D" parent="ParallaxBackground/FundoNivel"]
 position = Vector2(576, 325)
-texture = ExtResource("3_nmhhd")
+texture = ExtResource("3_puijk")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, 39)
@@ -99,17 +99,17 @@ scale = Vector2(1.5, 1.5)
 pivot_offset = Vector2(192.5, 16)
 size_flags_horizontal = 4
 value = 50.0
-texture_under = ExtResource("5_ciysb")
-texture_progress = ExtResource("6_7my8d")
+texture_under = ExtResource("5_uqk0h")
+texture_progress = ExtResource("6_p7tiu")
 texture_progress_offset = Vector2(6.5, 5)
 
-[node name="PauseWindow" parent="CameraLevel" instance=ExtResource("7_b7djm")]
+[node name="PauseWindow" parent="CameraLevel" instance=ExtResource("7_u2tdp")]
 
-[node name="DeathWindow" parent="CameraLevel" instance=ExtResource("8_qv2s2")]
+[node name="DeathWindow" parent="CameraLevel" instance=ExtResource("8_jg5vl")]
 
-[node name="WinWindow" parent="CameraLevel" instance=ExtResource("9_nbnlc")]
+[node name="WinWindow" parent="CameraLevel" instance=ExtResource("9_w8cbq")]
 
-[node name="Player" parent="." instance=ExtResource("10_6tewm")]
+[node name="Player" parent="." instance=ExtResource("10_klx11")]
 position = Vector2(120, 544)
 scale = Vector2(0.5, 0.5)
 SKATE_VELOCITY = 225.0
@@ -125,13 +125,13 @@ shape = SubResource("RectangleShape2D_0t6uf")
 
 [node name="Colecionaveis" type="Node" parent="."]
 
-[node name="Mixtape1" parent="Colecionaveis" instance=ExtResource("11_mhxon")]
+[node name="Mixtape1" parent="Colecionaveis" instance=ExtResource("11_bnlic")]
 position = Vector2(1848, 132)
 
-[node name="Mixtape2" parent="Colecionaveis" instance=ExtResource("11_mhxon")]
+[node name="Mixtape2" parent="Colecionaveis" instance=ExtResource("11_bnlic")]
 position = Vector2(2879, 147)
 
-[node name="Mixtape3" parent="Colecionaveis" instance=ExtResource("11_mhxon")]
+[node name="Mixtape3" parent="Colecionaveis" instance=ExtResource("11_bnlic")]
 position = Vector2(3525, 528)
 
 [connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
