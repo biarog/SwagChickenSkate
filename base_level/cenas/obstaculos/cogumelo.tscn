@@ -1,14 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bivrga8vbsma8"]
+[gd_scene load_steps=3 format=3 uid="uid://bivrga8vbsma8"]
 
 [ext_resource type="Texture2D" uid="uid://dmnbxs5slek02" path="res://Arts/obstaculos/cogumelo.png" id="1_1rjcm"]
+[ext_resource type="Script" path="res://base_level/scripts/obstaculo.gd" id="1_16pt5"]
 
 [node name="Cogumelo" type="Area2D"]
 scale = Vector2(0.2, 0.2)
+script = ExtResource("1_16pt5")
 
 [node name="DesenhoCogumelo" type="Sprite2D" parent="."]
 scale = Vector2(0.241, 0.241)
 texture = ExtResource("1_1rjcm")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="ColisaoCogumelo" type="CollisionPolygon2D" parent="."]
 scale = Vector2(0.241, 0.241)
-polygon = PackedVector2Array(-586, 361, -367, -457, 165, -1085, 494, -937, 627, -119, 337, 1151, -125, 1208)
+polygon = PackedVector2Array(-586, 361, -373.444, -435.685, 145.228, -1078.84, 494, -937, 627, -119, 337, 1151, -125, 1208)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
