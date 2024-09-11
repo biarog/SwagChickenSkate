@@ -214,7 +214,7 @@ shape = SubResource("RectangleShape2D_g3gid")
 [node name="Colecionaveis" type="Node" parent="."]
 
 [node name="Mixtape1" parent="Colecionaveis" instance=ExtResource("11_nfurp")]
-position = Vector2(2245, 156)
+position = Vector2(2696, 315)
 scale = Vector2(1, 1)
 
 [node name="Mixtape2" parent="Colecionaveis" instance=ExtResource("11_nfurp")]
