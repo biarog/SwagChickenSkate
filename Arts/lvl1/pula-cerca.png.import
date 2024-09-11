@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8e85ium1tihd"
-path="res://.godot/imported/céu com nuvem.jpg-39fa6696fd5bf3b369d796b908a42fec.ctex"
+uid="uid://balga352f5x8a"
+path="res://.godot/imported/pula-cerca.png-f8987a51a8eb14c59a6b29b264c60e3a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/céu com nuvem.jpg"
-dest_files=["res://.godot/imported/céu com nuvem.jpg-39fa6696fd5bf3b369d796b908a42fec.ctex"]
+source_file="res://Arts/lvl1/pula-cerca.png"
+dest_files=["res://.godot/imported/pula-cerca.png-f8987a51a8eb14c59a6b29b264c60e3a.ctex"]
 
 [params]
 

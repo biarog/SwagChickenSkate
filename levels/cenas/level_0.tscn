@@ -1,32 +1,51 @@
-[gd_scene load_steps=15 format=3 uid="uid://rwbemmdq6u8d"]
+[gd_scene load_steps=24 format=3 uid="uid://rwbemmdq6u8d"]
 
 [ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_dxoo0"]
 [ext_resource type="Texture2D" uid="uid://o35o2tpf55oo" path="res://Arts/tutorial/background_tutorial.png" id="2_eft6i"]
 [ext_resource type="Texture2D" uid="uid://dscskliyk4vtg" path="res://Arts/tutorial/background_tutorial2.png" id="3_puijk"]
+[ext_resource type="Texture2D" uid="uid://btubx87anunml" path="res://Arts/tutorial/PlacaFall.png" id="4_lvfj5"]
 [ext_resource type="Texture2D" uid="uid://droj2gn1da34l" path="res://Arts/tutorial/tilemap_tutorial.png" id="4_mgowo"]
+[ext_resource type="Texture2D" uid="uid://daked4r64efbk" path="res://Arts/tutorial/PlacaAvoid.png" id="5_e5k3e"]
 [ext_resource type="Texture2D" uid="uid://c3gv3334wc8ex" path="res://Arts/GUI/pgb1.png" id="5_uqk0h"]
+[ext_resource type="Texture2D" uid="uid://bs888jga64cec" path="res://Arts/tutorial/PlacaGet.png" id="6_7j1r6"]
 [ext_resource type="Texture2D" uid="uid://dvgayt66k1plv" path="res://Arts/GUI/pgb2.png" id="6_p7tiu"]
 [ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="7_u2tdp"]
+[ext_resource type="Texture2D" uid="uid://bf68kue75dln2" path="res://Arts/tutorial/PlacaJump.png" id="7_vtfkr"]
+[ext_resource type="Texture2D" uid="uid://dpc6fe3xsftu8" path="res://Arts/tutorial/PlacaExit.png" id="8_i3wmw"]
 [ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="8_jg5vl"]
 [ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="9_w8cbq"]
 [ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="10_klx11"]
+[ext_resource type="PackedScene" uid="uid://badpeto25otft" path="res://base_level/cenas/obstaculos/prego_1.tscn" id="11_4dsou"]
 [ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="11_bnlic"]
+[ext_resource type="PackedScene" uid="uid://88rc5uefcbrx" path="res://base_level/cenas/obstaculos/bola_feno.tscn" id="16_wyty0"]
+[ext_resource type="PackedScene" uid="uid://c8emmqoiyviqq" path="res://base_level/cenas/obstaculos/prego_3.tscn" id="17_h4cka"]
+[ext_resource type="PackedScene" uid="uid://cmusgm0glr76c" path="res://base_level/cenas/obstaculos/prego_2.tscn" id="18_eegmt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p10bd"]
 texture = ExtResource("4_mgowo")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
 1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.3333, -32, -21.3333)
 1:0/0/physics_layer_0/polygon_0/one_way = true
 2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.3333, -32, -21.3333)
 2:0/0/physics_layer_0/polygon_0/one_way = true
 1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.3333, -32, -21.3333)
 1:1/0/physics_layer_0/polygon_0/one_way = true
 2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, -21.3333, -32, -21.3333)
 2:1/0/physics_layer_0/polygon_0/one_way = true
 
@@ -59,12 +78,70 @@ motion_mirroring = Vector2(1152, 0)
 position = Vector2(576, 325)
 texture = ExtResource("3_puijk")
 
+[node name="Placas" type="Node2D" parent="."]
+
+[node name="PlacaFall" type="Sprite2D" parent="Placas"]
+position = Vector2(1047, 150)
+texture = ExtResource("4_lvfj5")
+
+[node name="PlacaAvoid" type="Sprite2D" parent="Placas"]
+position = Vector2(1070, 547)
+rotation = 0.296526
+texture = ExtResource("5_e5k3e")
+
+[node name="PlacaGet" type="Sprite2D" parent="Placas"]
+position = Vector2(1565, 338)
+rotation = -0.211028
+texture = ExtResource("6_7j1r6")
+
+[node name="PlacaGet2" type="Sprite2D" parent="Placas"]
+position = Vector2(3336, 547)
+rotation = 0.0777508
+texture = ExtResource("6_7j1r6")
+
+[node name="PlacaJump" type="Sprite2D" parent="Placas"]
+position = Vector2(477, 549)
+texture = ExtResource("7_vtfkr")
+
+[node name="PlacaAvoid2" type="Sprite2D" parent="Placas"]
+position = Vector2(2366, 341)
+rotation = -0.251239
+texture = ExtResource("5_e5k3e")
+
+[node name="PlacaExit" type="Sprite2D" parent="Placas"]
+position = Vector2(4101, 552)
+rotation = 0.273794
+texture = ExtResource("8_i3wmw")
+
+[node name="Obstaculos" type="Node2D" parent="."]
+
+[node name="Prego1" parent="Obstaculos" instance=ExtResource("11_4dsou")]
+position = Vector2(1194, 568)
+scale = Vector2(1.48, 1.48)
+
+[node name="BolaFeno" parent="Obstaculos" instance=ExtResource("16_wyty0")]
+position = Vector2(2499, 364)
+scale = Vector2(1.04, 1.04)
+
+[node name="Prego2" parent="Obstaculos" instance=ExtResource("17_h4cka")]
+position = Vector2(2863, 209)
+rotation = 0.0896211
+scale = Vector2(0.44, 0.44)
+
+[node name="Prego3" parent="Obstaculos" instance=ExtResource("18_eegmt")]
+position = Vector2(3786, 576)
+
+[node name="BolaFeno2" parent="Obstaculos" instance=ExtResource("16_wyty0")]
+position = Vector2(3200, 412)
+rotation = -0.963064
+scale = Vector2(1.24162, 1.24162)
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, 39)
 tile_set = SubResource("TileSet_0yx61")
 rendering_quadrant_size = 64
 format = 2
-layer_0/tile_data = PackedInt32Array(589828, 3, 0, 589827, 3, 0, 589826, 3, 0, 589825, 3, 0, 589824, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 589841, 3, 0, 589842, 3, 0, 589843, 3, 0, 589844, 3, 0, 589845, 3, 0, 589846, 3, 0, 589847, 3, 0, 589848, 3, 0, 589849, 3, 0, 589850, 3, 0, 589851, 3, 0, 589852, 3, 0, 589853, 3, 0, 589854, 3, 0, 589855, 3, 0, 589856, 3, 0, 589857, 3, 0, 589858, 3, 0, 589859, 3, 0, 589860, 3, 0, 589861, 3, 0, 589862, 3, 0, 589863, 3, 0, 589864, 3, 0, 589865, 3, 0, 393235, 131075, 0, 393236, 131075, 0, 393237, 131075, 0, 393238, 131075, 0, 393239, 131075, 0, 393240, 131075, 0, 196634, 65539, 1, 196636, 131075, 1, 196637, 131075, 1, 196638, 131075, 1, 196639, 65539, 268435457, 393249, 65539, 0, 393250, 131075, 0, 393251, 131075, 0, 393252, 131075, 0, 393253, 65539, 268435456, 196650, 131075, 1, 196651, 131075, 1, 196652, 131075, 1, 196653, 131075, 1, 196654, 131075, 1, 196655, 65539, 268435457, 196623, 131075, 1, 196622, 131075, 1, 196621, 131075, 1, 196620, 131075, 1, 196619, 131075, 1, 196618, 65539, 1, 393230, 131075, 0, 393229, 131075, 0, 393228, 131075, 0, 393227, 131075, 0, 393226, 131075, 0, 393225, 65539, 0, 393231, 131075, 0, 393232, 131075, 0, 393233, 131075, 0, 196625, 65539, 268435457, 196624, 131075, 1, 393234, 131075, 0, 589873, 3, 0, 589874, 3, 0, 589875, 3, 0, 589876, 3, 0, 589877, 3, 0, 589878, 3, 0, 589870, 3, 0, 589871, 3, 0, 589872, 3, 0, 589890, 3, 0, 589891, 3, 0, 589892, 3, 0, 589879, 3, 0, 589880, 3, 0, 589881, 3, 0, 589882, 3, 0, 589883, 3, 0, 589884, 3, 0, 589885, 3, 0, 589886, 3, 0, 589887, 3, 0, 589888, 3, 0, 589889, 3, 0, 196649, 65539, 1, 196635, 131075, 1, 393241, 65539, 268435456)
+layer_0/tile_data = PackedInt32Array(589828, 3, 0, 589827, 3, 0, 589826, 3, 0, 589825, 3, 0, 589824, 3, 0, 589829, 3, 0, 589830, 3, 0, 589831, 3, 0, 589832, 3, 0, 589833, 3, 0, 589834, 3, 0, 589835, 3, 0, 589836, 3, 0, 589837, 3, 0, 589838, 3, 0, 589839, 3, 0, 589840, 3, 0, 589841, 3, 0, 589842, 3, 0, 589843, 3, 0, 589844, 3, 0, 589845, 3, 0, 589846, 3, 0, 589847, 3, 0, 589848, 3, 0, 589849, 3, 0, 589850, 3, 0, 589851, 3, 0, 589852, 3, 0, 589853, 3, 0, 589854, 3, 0, 589855, 3, 0, 589856, 3, 0, 589857, 3, 0, 589858, 3, 0, 589859, 3, 0, 589860, 3, 0, 589861, 3, 0, 589862, 3, 0, 589863, 3, 0, 589864, 3, 0, 589865, 3, 0, 393235, 131075, 0, 393236, 131075, 0, 393237, 131075, 0, 393238, 131075, 0, 393239, 131075, 0, 393240, 131075, 0, 196634, 65539, 1, 196636, 131075, 1, 196637, 131075, 1, 196638, 131075, 1, 196639, 65539, 268435457, 393249, 65539, 0, 393250, 131075, 0, 393251, 131075, 0, 393252, 131075, 0, 393253, 65539, 268435456, 196650, 131075, 1, 196651, 131075, 1, 196652, 131075, 1, 196653, 131075, 1, 196654, 131075, 1, 196655, 65539, 268435457, 196623, 131075, 1, 196622, 131075, 1, 196621, 131075, 1, 196620, 131075, 1, 196619, 131075, 1, 196618, 65539, 1, 393230, 131075, 0, 393229, 131075, 0, 393228, 131075, 0, 393227, 131075, 0, 393226, 131075, 0, 393225, 65539, 0, 393231, 131075, 0, 393232, 131075, 0, 393233, 131075, 0, 196625, 65539, 268435457, 196624, 131075, 1, 393234, 131075, 0, 589873, 3, 0, 589874, 3, 0, 589875, 3, 0, 589876, 3, 0, 589877, 3, 0, 589878, 3, 0, 589871, 3, 0, 589872, 3, 0, 589890, 3, 0, 589891, 3, 0, 589892, 3, 0, 589879, 3, 0, 589880, 3, 0, 589881, 3, 0, 589882, 3, 0, 589883, 3, 0, 589884, 3, 0, 589885, 3, 0, 589886, 3, 0, 589887, 3, 0, 589888, 3, 0, 589889, 3, 0, 196649, 65539, 1, 196635, 131075, 1, 393241, 65539, 268435456, 589870, 3, 0)
 
 [node name="InicioLVL" type="Marker2D" parent="."]
 position = Vector2(119, 544)
@@ -111,19 +188,22 @@ position = Vector2(-7836, 0)
 position = Vector2(12028, 313)
 shape = SubResource("RectangleShape2D_0t6uf")
 
-[node name="Obstaculos" type="Node" parent="."]
-
 [node name="Colecionaveis" type="Node" parent="."]
 
 [node name="Mixtape1" parent="Colecionaveis" instance=ExtResource("11_bnlic")]
 position = Vector2(1848, 132)
 
 [node name="Mixtape2" parent="Colecionaveis" instance=ExtResource("11_bnlic")]
-position = Vector2(2879, 147)
+position = Vector2(2846, 93)
 
 [node name="Mixtape3" parent="Colecionaveis" instance=ExtResource("11_bnlic")]
 position = Vector2(3525, 528)
 
+[connection signal="got_hit" from="Obstaculos/Prego1" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/BolaFeno" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Prego2" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/Prego3" to="." method="_on_got_hit"]
+[connection signal="got_hit" from="Obstaculos/BolaFeno2" to="." method="_on_got_hit"]
 [connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
 [connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
 [connection signal="area_entered" from="Colecionaveis/Mixtape1" to="Colecionaveis/Mixtape1" method="_on_area_entered"]

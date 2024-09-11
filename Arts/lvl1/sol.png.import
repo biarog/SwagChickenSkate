@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ts7vvnd81ikd"
-path="res://.godot/imported/galinheiro.png-ace8195f9d609e12464bac9a3f1fd1fa.ctex"
+uid="uid://dpx6vpdyw1o8c"
+path="res://.godot/imported/sol.png-963c835c0e3f15a755732d29e2adf8c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/galinheiro.png"
-dest_files=["res://.godot/imported/galinheiro.png-ace8195f9d609e12464bac9a3f1fd1fa.ctex"]
+source_file="res://Arts/lvl1/sol.png"
+dest_files=["res://.godot/imported/sol.png-963c835c0e3f15a755732d29e2adf8c4.ctex"]
 
 [params]
 

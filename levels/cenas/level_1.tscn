@@ -1,12 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://dorbqfhfmckjk"]
+[gd_scene load_steps=19 format=3 uid="uid://dorbqfhfmckjk"]
 
 [ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_6f18c"]
+[ext_resource type="Texture2D" uid="uid://oif5lne6mcv7" path="res://Arts/lvl1/nuvens.png" id="2_8a1mj"]
 [ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="2_iejf0"]
-[ext_resource type="Texture2D" uid="uid://ddf1omet53eud" path="res://Arts/background_nuvens_lineart.jpg" id="2_xjqvs"]
 [ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="3_6308u"]
-[ext_resource type="Texture2D" uid="uid://gd01r2hirbbc" path="res://Arts/background_colinas_temp.png" id="3_jq38y"]
+[ext_resource type="Texture2D" uid="uid://drbgfh200b44g" path="res://Arts/lvl1/chao-cerca.png" id="3_dfvc2"]
 [ext_resource type="TileSet" uid="uid://bvktyiydahqq2" path="res://Arts/tilemap.tres" id="3_qohyo"]
-[ext_resource type="Texture2D" uid="uid://ts7vvnd81ikd" path="res://Arts/galinheiro.png" id="4_x57uy"]
+[ext_resource type="Texture2D" uid="uid://ts7vvnd81ikd" path="res://Arts/lvl1/galinheiro.png" id="4_x57uy"]
+[ext_resource type="Texture2D" uid="uid://dpx6vpdyw1o8c" path="res://Arts/lvl1/sol.png" id="5_x2m24"]
 [ext_resource type="Texture2D" uid="uid://c3gv3334wc8ex" path="res://Arts/GUI/pgb1.png" id="6_cctkw"]
 [ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="6_ev5ef"]
 [ext_resource type="PackedScene" uid="uid://daimqumyvlrw2" path="res://base_level/cenas/obstaculos/espinho.tscn" id="6_i6141"]
@@ -14,6 +15,10 @@
 [ext_resource type="PackedScene" uid="uid://8100emtt7r7d" path="res://base_level/cenas/obstaculos/pedra.tscn" id="6_usgxl"]
 [ext_resource type="Texture2D" uid="uid://dvgayt66k1plv" path="res://Arts/GUI/pgb2.png" id="7_0d1b2"]
 [ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="11_nfurp"]
+[ext_resource type="Texture2D" uid="uid://balga352f5x8a" path="res://Arts/lvl1/pula-cerca.png" id="14_bxml8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkvm1"]
+size = Vector2(282, 86)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g3gid"]
 size = Vector2(382, 618)
@@ -25,41 +30,35 @@ metadata/_edit_horizontal_guides_ = [-3.0]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Nuvens" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.3, 0.3)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Sky"]
-texture = ExtResource("2_xjqvs")
+[node name="DesenhoNuvens" type="Sprite2D" parent="ParallaxBackground/Nuvens"]
+texture = ExtResource("2_8a1mj")
 centered = false
 
-[node name="background" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Colinas" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)
 motion_mirroring = Vector2(1152, 0)
 
-[node name="Colinas" type="Sprite2D" parent="ParallaxBackground/background"]
-texture = ExtResource("3_jq38y")
+[node name="DesenhoColinas" type="Sprite2D" parent="ParallaxBackground/Colinas"]
+texture = ExtResource("3_dfvc2")
 centered = false
 
 [node name="Galinheiro" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.5, 0.5)
 
-[node name="galinheiro" type="Sprite2D" parent="ParallaxBackground/Galinheiro"]
-position = Vector2(287, 245)
+[node name="DesenhoGalinheiro" type="Sprite2D" parent="ParallaxBackground/Galinheiro"]
 texture = ExtResource("4_x57uy")
 centered = false
 
-[node name="TileMap" type="TileMap" parent="."]
-position = Vector2(0, 33)
-tile_set = ExtResource("3_qohyo")
-format = 2
-layer_0/tile_data = PackedInt32Array(589824, 0, 2, 589827, 65536, 0, 589829, 65536, 0, 589828, 0, 0, 589826, 0, 0, 589831, 65536, 1, 393223, 131072, 2, 393224, 131072, 2, 393225, 131072, 2, 196633, 131072, 0, 196634, 131072, 0, 196635, 131072, 0, 393247, 131072, 2, 393248, 131072, 2, 393246, 131072, 2, 196641, 131072, 0, 196642, 131072, 0, 196643, 131072, 0, 196644, 131072, 0, 393261, 131072, 2, 393262, 131072, 2, 393263, 131072, 2, 393264, 131072, 2, 393265, 131072, 2, 393221, 131072, 2, 393222, 131072, 2, 196618, 131072, 0, 196619, 131072, 0, 196620, 131072, 0, 589839, 0, 0, 589840, 65536, 0, 589841, 0, 0, 589842, 65536, 1, 589838, 65536, 2, 393236, 131072, 2, 393235, 131072, 2, 196625, 131072, 0, 196626, 131072, 0, 196627, 131072, 0, 589851, 65536, 2, 589852, 0, 0, 589854, 0, 0, 589856, 0, 0, 589858, 0, 0, 589859, 65536, 1, 589857, 65536, 0, 589855, 65536, 0, 589853, 65536, 0, 393243, 131072, 2, 393242, 131072, 2, 393237, 131072, 2, 393238, 131072, 2, 393256, 131072, 2, 393255, 131072, 2, 393260, 131072, 2, 589863, 0, 2, 589865, 0, 0, 589864, 65536, 0, 589866, 65536, 1, 589873, 65536, 2, 589874, 0, 0, 589876, 0, 0, 589878, 0, 0, 589877, 65536, 0, 589875, 65536, 0, 589879, 65536, 1, 589888, 0, 2, 589889, 65536, 0, 589891, 65536, 0, 589893, 65536, 1, 589892, 0, 0, 589890, 0, 0, 589897, 65536, 2, 589898, 0, 0, 589899, 65536, 1, 196650, 131072, 0, 196649, 131072, 0, 196648, 131072, 0, 196658, 131072, 0, 196659, 131072, 0, 196660, 131072, 0, 196661, 131072, 0, 196662, 131072, 0, 196668, 131072, 0, 196669, 131072, 0, 196670, 131072, 0, 196671, 131072, 0, 196672, 131072, 0, 196673, 131072, 0, 196681, 131072, 0, 196682, 131072, 0, 196683, 131072, 0, 393273, 131072, 2, 393274, 131072, 2, 393272, 131072, 2, 393271, 131072, 2, 393284, 131072, 2, 393285, 131072, 2, 393286, 131072, 2, 393287, 131072, 2, 393294, 131072, 2, 393295, 131072, 2, 393293, 131072, 2, 589905, 65536, 2, 589906, 0, 0, 589908, 0, 0, 589909, 65536, 1, 589907, 65536, 0, 393302, 131072, 2, 393303, 131072, 2, 196689, 131072, 0, 196690, 131072, 0, 196691, 131072, 0, 196692, 131072, 0, 196697, 131072, 0, 196698, 131072, 0, 196699, 131072, 0, 589920, 0, 2, 589921, 65536, 0, 589923, 65536, 0, 589925, 65536, 0, 589926, 0, 1, 589924, 0, 0, 589922, 0, 0, 589931, 65536, 2, 589932, 0, 0, 589934, 0, 0, 589935, 65536, 0, 589933, 65536, 0, 589936, 0, 1, 196726, 131072, 0, 196727, 131072, 0, 196728, 131072, 0, 589944, 0, 2, 589945, 65536, 0, 589946, 0, 0, 589947, 65536, 1, 589952, 65536, 2, 589953, 0, 0, 589954, 65536, 1, 589961, 0, 2, 589962, 65536, 0, 589964, 65536, 0, 589966, 65536, 0, 589968, 65536, 0, 589970, 65536, 0, 589972, 65536, 0, 589974, 65536, 0, 589976, 65536, 0, 589978, 65536, 0, 589963, 0, 0, 589965, 0, 0, 589967, 0, 0, 589969, 0, 0, 589971, 0, 0, 589973, 0, 0, 589975, 0, 0, 589977, 0, 0, 589979, 0, 0, -65366, 65536, 0, 170, 65536, 0, 65706, 65536, 0, 131242, 65536, 0, 196778, 65536, 0, 262314, 65536, 0, 327850, 65536, 0, 393386, 65536, 0, 458922, 65536, 0, 524458, 65536, 0, 589994, 65536, 0, 589980, 65536, 0, 589982, 65536, 0, 589984, 65536, 0, 589986, 65536, 0, 589988, 65536, 0, 589990, 65536, 0, 589992, 65536, 0, 589981, 0, 0, 589983, 0, 0, 589985, 0, 0, 589987, 0, 0, 589989, 0, 0, 589991, 0, 0, 589993, 0, 0, 393308, 131072, 2, 393309, 131072, 2, 393307, 131072, 2, 589913, 0, 2, 589914, 65536, 0, 589916, 65536, 1, 589915, 0, 0, 196706, 131072, 0, 196707, 131072, 0, 196708, 131072, 0, 393316, 131072, 2, 393317, 131072, 2, 393318, 131072, 2, 393319, 131072, 2, 393315, 131072, 2, 393324, 131072, 2, 393325, 131072, 2, 393326, 131072, 2, 196715, 131072, 0, 196716, 131072, 0, 196717, 131072, 0, 196718, 131072, 0, 196719, 131072, 0, 196720, 131072, 0, 393327, 131072, 2, 393331, 131072, 2, 393332, 131072, 2, 393333, 131072, 2, 393340, 131072, 2, 393341, 131072, 2, 393338, 131072, 2, 393339, 131072, 2, 196735, 131072, 0, 196736, 131072, 0, 196737, 131072, 0, 196738, 131072, 0, 196739, 131072, 0, 196740, 131072, 0, 589825, 65536, 0, 589830, 0, 0, 393334, 131072, 2)
+[node name="Sol" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
 
-[node name="InicioLVL" type="Marker2D" parent="."]
-position = Vector2(120, 544)
-
-[node name="FinalLVL" type="Marker2D" parent="."]
-position = Vector2(9123, 313)
+[node name="DesenhoSol" type="Sprite2D" parent="ParallaxBackground/Sol"]
+texture = ExtResource("5_x2m24")
+centered = false
 
 [node name="CameraLevel" type="Camera2D" parent="."]
 position = Vector2(576, 324)
@@ -89,19 +88,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="WinWindow" parent="CameraLevel" instance=ExtResource("6_ev5ef")]
 
-[node name="Player" parent="." instance=ExtResource("2_iejf0")]
-position = Vector2(120, 544)
-scale = Vector2(0.5, 0.5)
-SKATE_VELOCITY = 250.0
-
-[node name="VictoryArea" type="Area2D" parent="."]
-position = Vector2(-2714, 0)
-
-[node name="VicotryCollision" type="CollisionShape2D" parent="VictoryArea"]
-position = Vector2(12028, 313)
-shape = SubResource("RectangleShape2D_g3gid")
-
-[node name="Obstaculos" type="Node" parent="."]
+[node name="Obstaculos" type="Node2D" parent="."]
 
 [node name="Espinho" parent="Obstaculos" instance=ExtResource("6_i6141")]
 position = Vector2(950, 396)
@@ -143,7 +130,45 @@ position = Vector2(4745, 192)
 position = Vector2(6197, 581)
 
 [node name="Pedra7" parent="Obstaculos" instance=ExtResource("6_usgxl")]
-position = Vector2(7565, 194)
+position = Vector2(7575, 204)
+
+[node name="Pula-Cerca2" type="StaticBody2D" parent="Obstaculos"]
+position = Vector2(8442, 435)
+
+[node name="DesenhoCerca" type="Sprite2D" parent="Obstaculos/Pula-Cerca2"]
+position = Vector2(-448, -96)
+texture = ExtResource("14_bxml8")
+
+[node name="ColisaoCerca" type="CollisionShape2D" parent="Obstaculos/Pula-Cerca2"]
+position = Vector2(48, 86)
+rotation = -1.57079
+shape = SubResource("RectangleShape2D_mkvm1")
+one_way_collision = true
+one_way_collision_margin = 29.0
+
+[node name="Player" parent="." instance=ExtResource("2_iejf0")]
+position = Vector2(120, 544)
+scale = Vector2(0.5, 0.5)
+SKATE_VELOCITY = 250.0
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 21)
+tile_set = ExtResource("3_qohyo")
+format = 2
+layer_0/tile_data = PackedInt32Array(589824, 1, 0, 589827, 1, 0, 589829, 1, 0, 589828, 1, 0, 589826, 1, 0, 589831, 1, 2, 393223, 131073, 268435456, 393224, 131073, 268435456, 393225, 65537, 268435456, 196633, 65537, 1, 196634, 131073, 1, 196635, 65537, 268435457, 393247, 131073, 268435456, 393248, 65537, 268435456, 393246, 65537, 0, 196641, 65537, 1, 196642, 131073, 1, 196643, 131073, 1, 196644, 65537, 268435457, 393261, 131073, 268435456, 393262, 131073, 268435456, 393263, 131073, 268435456, 393264, 131073, 268435456, 393265, 65537, 268435456, 393221, 65537, 0, 393222, 131073, 268435456, 196618, 65537, 1, 196619, 131073, 1, 196620, 65537, 268435457, 589839, 1, 0, 589840, 1, 1, 589841, 1, 0, 589842, 1, 2, 589838, 1, 268435458, 393235, 65537, 0, 196625, 65537, 1, 196626, 131073, 1, 196627, 65537, 268435457, 589851, 1, 268435458, 589852, 1, 0, 589854, 1, 0, 589856, 1, 1, 589858, 1, 1, 589859, 1, 2, 589857, 1, 0, 589855, 1, 0, 589853, 1, 1, 393243, 65537, 268435456, 393242, 65537, 0, 393238, 65537, 268435456, 393256, 65537, 268435456, 393255, 65537, 0, 393260, 65537, 0, 589863, 1, 268435458, 589865, 1, 1, 589864, 1, 0, 589866, 1, 2, 589873, 1, 268435458, 589874, 1, 1, 589876, 1, 1, 589878, 1, 0, 589877, 1, 0, 589875, 1, 0, 589879, 1, 2, 589888, 1, 268435458, 589889, 1, 1, 589891, 1, 1, 589893, 1, 2, 589892, 1, 1, 589890, 1, 0, 589897, 1, 268435458, 589898, 1, 1, 589899, 1, 2, 196650, 65537, 268435457, 196649, 131073, 1, 196648, 65537, 1, 196658, 65537, 1, 196659, 131073, 1, 196660, 131073, 1, 196661, 131073, 1, 196662, 65537, 268435457, 196668, 65537, 1, 196669, 131073, 1, 196670, 131073, 1, 196671, 131073, 1, 196672, 131073, 1, 196673, 65537, 268435457, 196681, 65537, 1, 196682, 131073, 1, 196683, 65537, 268435457, 393273, 131073, 268435456, 393274, 65537, 268435456, 393272, 131073, 268435456, 393271, 65537, 0, 393284, 65537, 0, 393285, 131073, 268435456, 393286, 131073, 268435456, 393287, 65537, 268435456, 393294, 131073, 268435456, 393295, 65537, 268435456, 393293, 65537, 0, 589905, 1, 268435458, 589906, 1, 0, 589908, 1, 0, 589909, 1, 2, 589907, 1, 0, 393302, 65537, 0, 393303, 65537, 268435456, 196689, 65537, 1, 196690, 131073, 1, 196691, 131073, 1, 196692, 65537, 268435457, 196697, 65537, 1, 196698, 131073, 1, 196699, 65537, 268435457, 589920, 1, 268435458, 589921, 1, 0, 589923, 1, 1, 589925, 1, 1, 589926, 1, 2, 589924, 1, 0, 589922, 1, 0, 589931, 1, 268435458, 589932, 1, 1, 589934, 1, 1, 589935, 1, 0, 589933, 1, 0, 589936, 1, 2, 196726, 65537, 1, 196727, 131073, 1, 196728, 65537, 268435457, 589944, 1, 268435458, 589945, 1, 0, 589946, 1, 1, 589947, 1, 2, 589952, 1, 268435458, 589953, 1, 0, 589954, 1, 2, 589961, 1, 268435458, 589962, 1, 1, 589964, 1, 1, 589966, 1, 0, 589968, 1, 1, 589970, 1, 0, 589972, 1, 0, 589974, 1, 0, 589976, 1, 1, 589978, 1, 0, 589963, 1, 0, 589965, 1, 0, 589967, 1, 0, 589969, 1, 0, 589971, 1, 0, 589973, 1, 0, 589975, 1, 1, 589977, 1, 0, 589979, 1, 0, -65366, 1, 0, 170, 1, 0, 65706, 1, 0, 131242, 1, 0, 196778, 1, 0, 262314, 1, 0, 327850, 1, 0, 393386, 1, 0, 458922, 1, 0, 524458, 1, 0, 589994, 1, 0, 589980, 1, 0, 589982, 1, 0, 589984, 1, 0, 589986, 1, 0, 589988, 1, 0, 589990, 1, 0, 589992, 1, 0, 589981, 1, 0, 589983, 1, 0, 589985, 1, 0, 589987, 1, 0, 589989, 1, 0, 589991, 1, 0, 589993, 1, 0, 393308, 131073, 268435456, 393309, 65537, 268435456, 393307, 65537, 0, 589913, 1, 268435458, 589914, 1, 1, 589916, 1, 2, 589915, 1, 1, 196706, 65537, 1, 196707, 131073, 1, 196708, 65537, 268435457, 393316, 131073, 268435456, 393317, 131073, 268435456, 393318, 131073, 268435456, 393319, 65537, 268435456, 393315, 65537, 0, 393324, 65537, 0, 393325, 131073, 268435456, 393326, 131073, 268435456, 196715, 65537, 1, 196716, 131073, 1, 196717, 131073, 1, 196718, 131073, 1, 196719, 131073, 1, 196720, 65537, 268435457, 393327, 65537, 268435456, 393331, 65537, 0, 393332, 131073, 268435456, 393333, 131073, 268435456, 393340, 131073, 268435456, 393341, 65537, 268435456, 393338, 65537, 0, 393339, 131073, 268435456, 196735, 65537, 1, 196736, 131073, 1, 196737, 131073, 1, 196738, 131073, 1, 196739, 131073, 1, 196740, 65537, 268435457, 589825, 1, 1, 589830, 1, 1, 393334, 65537, 268435456, 393236, 131073, 268435456, 393237, 131073, 268435456, 655518, 1, 1)
+
+[node name="InicioLVL" type="Marker2D" parent="."]
+position = Vector2(120, 544)
+
+[node name="FinalLVL" type="Marker2D" parent="."]
+position = Vector2(9123, 313)
+
+[node name="VictoryArea" type="Area2D" parent="."]
+position = Vector2(-2714, 0)
+
+[node name="VicotryCollision" type="CollisionShape2D" parent="VictoryArea"]
+position = Vector2(12028, 313)
+shape = SubResource("RectangleShape2D_g3gid")
 
 [node name="Colecionaveis" type="Node" parent="."]
 
@@ -159,9 +184,6 @@ scale = Vector2(1, 1)
 position = Vector2(7855, 220)
 scale = Vector2(1, 1)
 
-[connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
-[connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
-[connection signal="body_entered" from="VictoryArea" to="CameraLevel" method="_on_victory_area_body_entered"]
 [connection signal="got_hit" from="Obstaculos/Espinho" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho2" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho3" to="." method="_on_got_hit"]
@@ -176,6 +198,9 @@ scale = Vector2(1, 1)
 [connection signal="got_hit" from="Obstaculos/Pedra5" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Pedra6" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Pedra7" to="." method="_on_got_hit"]
+[connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
+[connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
+[connection signal="body_entered" from="VictoryArea" to="CameraLevel" method="_on_victory_area_body_entered"]
 [connection signal="area_entered" from="Colecionaveis/Mixtape1" to="Colecionaveis/Mixtape1" method="_on_area_entered"]
 [connection signal="collected_mix" from="Colecionaveis/Mixtape1" to="." method="_on_mixtape_1_collected_mix"]
 [connection signal="area_entered" from="Colecionaveis/Mixtape2" to="Colecionaveis/Mixtape2" method="_on_area_entered"]
