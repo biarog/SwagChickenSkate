@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nwfm2tqmk6q4"
-path="res://.godot/imported/tilemap2.0_scs.png-ed1508acbb8d39077bce02f6b7bd54ad.ctex"
+uid="uid://cuugqs3w61ckd"
+path="res://.godot/imported/arvore 2.png-a29dea3808ca87d652541ff8ead57a62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/tilemap2.0_scs.png"
-dest_files=["res://.godot/imported/tilemap2.0_scs.png-ed1508acbb8d39077bce02f6b7bd54ad.ctex"]
+source_file="res://Arts/lvl2/arvore 2.png"
+dest_files=["res://.godot/imported/arvore 2.png-a29dea3808ca87d652541ff8ead57a62.ctex"]
 
 [params]
 

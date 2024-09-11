@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddf1omet53eud"
-path="res://.godot/imported/background_nuvens_lineart.jpg-b2e22d58276fd51e9a4befd5ba2978bb.ctex"
+uid="uid://d0650kcogspy3"
+path="res://.godot/imported/arvorebg1.png-86cd847ed950474b2639b1129d71012a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Arts/background_nuvens_lineart.jpg"
-dest_files=["res://.godot/imported/background_nuvens_lineart.jpg-b2e22d58276fd51e9a4befd5ba2978bb.ctex"]
+source_file="res://Arts/lvl2/arvorebg1.png"
+dest_files=["res://.godot/imported/arvorebg1.png-86cd847ed950474b2639b1129d71012a.ctex"]
 
 [params]
 

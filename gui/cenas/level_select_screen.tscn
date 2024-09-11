@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://tiqp58w64ol4"]
+[gd_scene load_steps=7 format=3 uid="uid://tiqp58w64ol4"]
 
 [ext_resource type="PackedScene" uid="uid://duu18ax3r6re0" path="res://gui/cenas/change_scene_button.tscn" id="1_glt1r"]
 [ext_resource type="Script" path="res://gui/scripts/level_select_screen.gd" id="1_uo1cu"]
+[ext_resource type="Texture2D" uid="uid://cijsleeqwg3ep" path="res://Arts/GUI/lvl0_select.png" id="2_87khj"]
+[ext_resource type="Texture2D" uid="uid://dbdi5tb1gyd4u" path="res://Arts/GUI/lvl1_select.png" id="3_tmtgw"]
+[ext_resource type="Texture2D" uid="uid://dffvt3s6daxq3" path="res://Arts/GUI/lvl2_select.png" id="4_t3pra"]
+[ext_resource type="Texture2D" uid="uid://b68edwwkysc7d" path="res://Arts/GUI/lvl_select_barrier.png" id="5_y8uvf"]
 
 [node name="LevelSelectScreen" type="Control"]
 layout_mode = 3
@@ -12,6 +16,46 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uo1cu")
 dir_path = "res://levels/cenas"
+
+[node name="Arte" type="Node2D" parent="."]
+
+[node name="Lvl2" type="Sprite2D" parent="Arte"]
+position = Vector2(2258, 0)
+texture = ExtResource("4_t3pra")
+centered = false
+
+[node name="Lvl1" type="Sprite2D" parent="Arte"]
+position = Vector2(1111, 0)
+texture = ExtResource("3_tmtgw")
+centered = false
+
+[node name="Lvl0" type="Sprite2D" parent="Arte"]
+texture = ExtResource("2_87khj")
+centered = false
+
+[node name="Divisao" type="Sprite2D" parent="Arte"]
+position = Vector2(750, 0)
+scale = Vector2(0.68, 1)
+texture = ExtResource("5_y8uvf")
+centered = false
+
+[node name="Divisao2" type="Sprite2D" parent="Arte"]
+position = Vector2(-397, 0)
+scale = Vector2(0.68, 1)
+texture = ExtResource("5_y8uvf")
+centered = false
+
+[node name="Divisao3" type="Sprite2D" parent="Arte"]
+position = Vector2(1823, 0)
+scale = Vector2(0.68, 1)
+texture = ExtResource("5_y8uvf")
+centered = false
+
+[node name="Divisao4" type="Sprite2D" parent="Arte"]
+position = Vector2(3005, 3)
+scale = Vector2(0.68, 1)
+texture = ExtResource("5_y8uvf")
+centered = false
 
 [node name="Camera" type="Camera2D" parent="."]
 position = Vector2(576, 324)
@@ -26,6 +70,7 @@ offset_right = 129.5
 offset_bottom = -165.0
 grow_horizontal = 2
 pivot_offset = Vector2(129.5, 25)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "Level Selection"
 

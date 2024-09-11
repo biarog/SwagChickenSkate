@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://drxk1mvagwlks"]
+
+[ext_resource type="Texture2D" uid="uid://ddcyetnc5j21d" path="res://Arts/lvl2/sprite_fox.png" id="1_2kd5v"]
+[ext_resource type="Script" path="res://base_level/scripts/obstaculo.gd" id="1_aijwq"]
+
+[sub_resource type="Animation" id="Animation_4kx87"]
+resource_name = "idle"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l5mt7"]
+_data = {
+"idle": SubResource("Animation_4kx87")
+}
+
+[node name="BossFox" type="Area2D"]
+script = ExtResource("1_aijwq")
+
+[node name="DesenhoFox" type="Sprite2D" parent="."]
+texture = ExtResource("1_2kd5v")
+hframes = 2
+frame = 1
+
+[node name="AnimacaoFox" type="AnimationPlayer" parent="."]
+root_node = NodePath("../DesenhoFox")
+libraries = {
+"": SubResource("AnimationLibrary_l5mt7")
+}
+
+[node name="ColisaoFox" type="CollisionPolygon2D" parent="."]
+position = Vector2(11, -1)
+rotation = 0.0489342
+scale = Vector2(1.55945, 0.692556)
+polygon = PackedVector2Array(21.1613, -50.5374, 25.65, -90.9673, 25.65, -155.944, 28.215, -249.799, 31.4213, -264.238, 5.77125, -206.481, -7.695, -153.056, -15.39, -187.71, -22.4438, -287.341, -22.4438, -334.991, -42.3225, -270.014, -54.5063, -205.037, -63.4838, -121.29, -63.4838, -86.6356, -60.2775, -1.44393, -75.0263, 63.5327, -75.6675, 347.986, -66.69, 301.781, -50.6588, 285.897, -44.8875, 333.547, -30.1388, 347.986, -30.78, 287.341, -18.5963, 270.014, -1.2825, 290.229, 8.33625, 284.453, 12.825, 264.238, 20.52, 238.248, 39.1162, 218.033, 55.1475, 229.584, 61.56, 238.248, 68.6138, 236.804, 70.5375, 222.365, 57.7125, 166.051, 46.8113, 106.851, 37.8338, 20.215, 28.8563, -15.8832, 19.2375, -36.0981)
