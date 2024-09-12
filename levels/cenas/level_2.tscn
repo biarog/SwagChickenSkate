@@ -94,7 +94,7 @@ centered = false
 [node name="Player" parent="." instance=ExtResource("11_nlq7j")]
 position = Vector2(477, 558)
 scale = Vector2(0.5, 0.5)
-SKATE_VELOCITY = 395.0
+SKATE_VELOCITY = 400.0
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(23, 35)
@@ -106,7 +106,7 @@ layer_0/tile_data = PackedInt32Array(589835, 0, 2, 589836, 0, 2, 589837, 0, 2, 5
 position = Vector2(476, 556)
 
 [node name="FinalLVL" type="Marker2D" parent="."]
-position = Vector2(11011, -235)
+position = Vector2(11012, -229)
 
 [node name="CameraLevel" type="Camera2D" parent="."]
 position = Vector2(576, 324)
@@ -140,7 +140,7 @@ texture_progress_offset = Vector2(6.5, 5)
 position = Vector2(-2714, 0)
 
 [node name="VicotryCollision" type="CollisionShape2D" parent="VictoryArea"]
-position = Vector2(13910, -238)
+position = Vector2(13908, -232)
 shape = SubResource("RectangleShape2D_g3gid")
 
 [node name="Obstaculos" type="Node2D" parent="."]
@@ -160,14 +160,11 @@ position = Vector2(2945, 575)
 [node name="Cogumelo5" parent="Obstaculos" instance=ExtResource("13_ssfol")]
 position = Vector2(4624, 585)
 
-[node name="Cogumelo6" parent="Obstaculos" instance=ExtResource("13_ssfol")]
-position = Vector2(5989, 576)
-
 [node name="Cogumelo7" parent="Obstaculos" instance=ExtResource("13_ssfol")]
 position = Vector2(6391, 578)
 
 [node name="Cogumelo8" parent="Obstaculos" instance=ExtResource("13_ssfol")]
-position = Vector2(8651, 187)
+position = Vector2(8676, 189)
 
 [node name="Cogumelo9" parent="Obstaculos" instance=ExtResource("13_ssfol")]
 position = Vector2(9623, 584)
@@ -207,23 +204,19 @@ position = Vector2(2200, 386)
 rotation = 1.79594
 
 [node name="Espinho2" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
-position = Vector2(2783, 209)
+position = Vector2(4065, 400)
 rotation = 1.79594
 
 [node name="Espinho3" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
 position = Vector2(3288, 313)
 rotation = 1.79594
 
-[node name="Espinho4" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
-position = Vector2(3807, 395)
-rotation = 1.79594
-
 [node name="Espinho5" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
-position = Vector2(5279, 382)
+position = Vector2(5311, 375)
 rotation = 1.79594
 
 [node name="Espinho6" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
-position = Vector2(5670, 511)
+position = Vector2(5699, 535)
 rotation = 1.79594
 
 [node name="Espinho7" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
@@ -259,7 +252,6 @@ position = Vector2(-121, 331)
 [connection signal="got_hit" from="Obstaculos/Cogumelo3" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo4" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo5" to="." method="_on_got_hit"]
-[connection signal="got_hit" from="Obstaculos/Cogumelo6" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo7" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo8" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo9" to="." method="_on_got_hit"]
@@ -276,7 +268,6 @@ position = Vector2(-121, 331)
 [connection signal="got_hit" from="Obstaculos/Espinho" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho2" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho3" to="." method="_on_got_hit"]
-[connection signal="got_hit" from="Obstaculos/Espinho4" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho5" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho6" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho7" to="." method="_on_got_hit"]
