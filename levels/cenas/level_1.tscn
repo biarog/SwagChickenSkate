@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dorbqfhfmckjk"]
+[gd_scene load_steps=22 format=3 uid="uid://dorbqfhfmckjk"]
 
 [ext_resource type="Script" path="res://base_level/scripts/level.gd" id="1_6f18c"]
 [ext_resource type="Texture2D" uid="uid://oif5lne6mcv7" path="res://Arts/lvl1/nuvens.png" id="2_8a1mj"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="11_nfurp"]
 [ext_resource type="Texture2D" uid="uid://balga352f5x8a" path="res://Arts/lvl1/pula-cerca.png" id="14_bxml8"]
 [ext_resource type="Texture2D" uid="uid://y8dm6vdvnvuc" path="res://Arts/lvl1/tilemap-lvl1.png" id="15_pfb74"]
+[ext_resource type="PackedScene" uid="uid://cy6bay1jyeekj" path="res://base_level/cenas/obstaculos/arbusto.tscn" id="17_pg5o5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mkvm1"]
 size = Vector2(282, 86)
@@ -124,10 +125,13 @@ texture_progress_offset = Vector2(6.5, 5)
 metadata/_edit_use_anchors_ = true
 
 [node name="PauseWindow" parent="CameraLevel" instance=ExtResource("3_6308u")]
+visible = false
 
 [node name="DeathWindow" parent="CameraLevel" instance=ExtResource("6_iborm")]
+visible = false
 
 [node name="WinWindow" parent="CameraLevel" instance=ExtResource("6_ev5ef")]
+visible = false
 
 [node name="Obstaculos" type="Node2D" parent="."]
 
@@ -139,12 +143,6 @@ position = Vector2(2373, 383)
 
 [node name="Espinho3" parent="Obstaculos" instance=ExtResource("6_i6141")]
 position = Vector2(3387, 533)
-
-[node name="Espinho4" parent="Obstaculos" instance=ExtResource("6_i6141")]
-position = Vector2(3727, 152)
-
-[node name="Espinho5" parent="Obstaculos" instance=ExtResource("6_i6141")]
-position = Vector2(5296, 521)
 
 [node name="Espinho6" parent="Obstaculos" instance=ExtResource("6_i6141")]
 position = Vector2(5547, 386)
@@ -158,14 +156,8 @@ position = Vector2(436, 582)
 [node name="Pedra2" parent="Obstaculos" instance=ExtResource("6_usgxl")]
 position = Vector2(2081, 385)
 
-[node name="Pedra3" parent="Obstaculos" instance=ExtResource("6_usgxl")]
-position = Vector2(2904, 389)
-
 [node name="Pedra4" parent="Obstaculos" instance=ExtResource("6_usgxl")]
 position = Vector2(4131, 578)
-
-[node name="Pedra5" parent="Obstaculos" instance=ExtResource("6_usgxl")]
-position = Vector2(4745, 192)
 
 [node name="Pedra6" parent="Obstaculos" instance=ExtResource("6_usgxl")]
 position = Vector2(6197, 581)
@@ -225,18 +217,34 @@ scale = Vector2(1, 1)
 position = Vector2(7855, 220)
 scale = Vector2(1, 1)
 
+[node name="Arbusto" parent="." instance=ExtResource("17_pg5o5")]
+position = Vector2(1152, 548)
+scale = Vector2(0.05, 0.05)
+
+[node name="Arbusto2" parent="." instance=ExtResource("17_pg5o5")]
+position = Vector2(1854, 554)
+scale = Vector2(0.05, 0.05)
+
+[node name="Arbusto3" parent="." instance=ExtResource("17_pg5o5")]
+position = Vector2(4766, 164)
+scale = Vector2(0.05, 0.05)
+
+[node name="Arbusto4" parent="." instance=ExtResource("17_pg5o5")]
+position = Vector2(5250, 550)
+scale = Vector2(0.05, 0.05)
+
+[node name="Arbusto5" parent="." instance=ExtResource("17_pg5o5")]
+position = Vector2(7042, 558)
+scale = Vector2(0.05, 0.05)
+
 [connection signal="got_hit" from="Obstaculos/Espinho" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho2" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho3" to="." method="_on_got_hit"]
-[connection signal="got_hit" from="Obstaculos/Espinho4" to="." method="_on_got_hit"]
-[connection signal="got_hit" from="Obstaculos/Espinho5" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho6" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho7" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Pedra" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Pedra2" to="." method="_on_got_hit"]
-[connection signal="got_hit" from="Obstaculos/Pedra3" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Pedra4" to="." method="_on_got_hit"]
-[connection signal="got_hit" from="Obstaculos/Pedra5" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Pedra6" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Pedra7" to="." method="_on_got_hit"]
 [connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
