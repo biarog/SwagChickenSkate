@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://btmrgepwrw4d8"]
+[gd_scene load_steps=21 format=3 uid="uid://ckkylemxfp2xj"]
 
 [ext_resource type="Script" path="res://base_level/scripts/level2.gd" id="1_8ryn1"]
 [ext_resource type="Texture2D" uid="uid://cxnb2fy8fqryj" path="res://Arts/lvl2/nuvens.png" id="2_xw4wu"]
@@ -8,15 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://c3gv3334wc8ex" path="res://Arts/GUI/pgb1.png" id="6_45x3a"]
 [ext_resource type="Texture2D" uid="uid://7i57mopaog4i" path="res://Arts/lvl2/tilemap_lvl2.png" id="7_sd7si"]
 [ext_resource type="Texture2D" uid="uid://dvgayt66k1plv" path="res://Arts/GUI/pgb2.png" id="7_y47wc"]
-[ext_resource type="PackedScene" uid="uid://pakpwxuavyl4" path="res://gui/cenas/pause_window.tscn" id="8_qtakx"]
-[ext_resource type="PackedScene" uid="uid://4as28cbiv3oi" path="res://gui/cenas/death_window.tscn" id="9_281wk"]
-[ext_resource type="PackedScene" uid="uid://bk52yjkexsf4x" path="res://gui/cenas/win_window.tscn" id="10_1xbhc"]
+[ext_resource type="PackedScene" path="res://gui/cenas/pause_window.tscn" id="8_qtakx"]
+[ext_resource type="PackedScene" path="res://gui/cenas/death_window.tscn" id="9_281wk"]
+[ext_resource type="PackedScene" path="res://gui/cenas/win_window.tscn" id="10_1xbhc"]
 [ext_resource type="PackedScene" uid="uid://cgo2avomkgy6e" path="res://base_level/cenas/player.tscn" id="11_nlq7j"]
 [ext_resource type="PackedScene" uid="uid://bivrga8vbsma8" path="res://base_level/cenas/obstaculos/cogumelo.tscn" id="13_ssfol"]
 [ext_resource type="PackedScene" uid="uid://de58oiqjfmktk" path="res://base_level/cenas/mixtape.tscn" id="14_5rg40"]
 [ext_resource type="PackedScene" uid="uid://daimqumyvlrw2" path="res://base_level/cenas/obstaculos/espinho.tscn" id="14_kcp5r"]
 [ext_resource type="PackedScene" uid="uid://c8byde8de28rd" path="res://base_level/cenas/obstaculos/tronco.tscn" id="14_mkga7"]
-[ext_resource type="PackedScene" uid="uid://drxk1mvagwlks" path="res://base_level/cenas/boss_fox.tscn" id="17_5pjn6"]
+[ext_resource type="PackedScene" path="res://base_level/cenas/boss_fox.tscn" id="17_5pjn6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1t1vy"]
 texture = ExtResource("7_sd7si")
@@ -167,9 +167,6 @@ position = Vector2(1252, 575)
 [node name="Cogumelo2" parent="Obstaculos" instance=ExtResource("13_ssfol")]
 position = Vector2(1629, 378)
 
-[node name="Cogumelo3" parent="Obstaculos" instance=ExtResource("13_ssfol")]
-position = Vector2(2469, 577)
-
 [node name="Cogumelo4" parent="Obstaculos" instance=ExtResource("13_ssfol")]
 position = Vector2(2945, 575)
 
@@ -207,7 +204,7 @@ position = Vector2(5472, 588)
 position = Vector2(6499, 588)
 
 [node name="Tronco6" parent="Obstaculos" instance=ExtResource("14_mkga7")]
-position = Vector2(7878, 591)
+position = Vector2(7923, 591)
 
 [node name="Tronco7" parent="Obstaculos" instance=ExtResource("14_mkga7")]
 position = Vector2(9512, 582)
@@ -218,10 +215,6 @@ position = Vector2(10381, 585)
 [node name="Tronco9" parent="Obstaculos" instance=ExtResource("14_mkga7")]
 position = Vector2(10714, 590)
 
-[node name="Espinho" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
-position = Vector2(2200, 386)
-rotation = 1.79594
-
 [node name="Espinho2" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
 position = Vector2(2783, 209)
 rotation = 1.79594
@@ -231,11 +224,11 @@ position = Vector2(3288, 313)
 rotation = 1.79594
 
 [node name="Espinho4" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
-position = Vector2(3807, 395)
+position = Vector2(4054, 370)
 rotation = 1.79594
 
 [node name="Espinho5" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
-position = Vector2(5279, 382)
+position = Vector2(5014, 315)
 rotation = 1.79594
 
 [node name="Espinho6" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
@@ -272,7 +265,6 @@ position = Vector2(-121, 331)
 [connection signal="body_entered" from="VictoryArea" to="CameraLevel" method="_on_victory_area_body_entered"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo2" to="." method="_on_got_hit"]
-[connection signal="got_hit" from="Obstaculos/Cogumelo3" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo4" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo5" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo6" to="." method="_on_got_hit"]
@@ -289,7 +281,6 @@ position = Vector2(-121, 331)
 [connection signal="got_hit" from="Obstaculos/Tronco7" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Tronco8" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Tronco9" to="." method="_on_got_hit"]
-[connection signal="got_hit" from="Obstaculos/Espinho" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho2" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho3" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Espinho4" to="." method="_on_got_hit"]
