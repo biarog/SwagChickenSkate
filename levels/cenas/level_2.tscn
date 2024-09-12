@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ckkylemxfp2xj"]
+[gd_scene load_steps=26 format=3 uid="uid://ckkylemxfp2xj"]
 
 [ext_resource type="Script" path="res://base_level/scripts/level2.gd" id="1_8ryn1"]
 [ext_resource type="Texture2D" uid="uid://cxnb2fy8fqryj" path="res://Arts/lvl2/nuvens.png" id="2_xw4wu"]
@@ -17,6 +17,11 @@
 [ext_resource type="PackedScene" uid="uid://daimqumyvlrw2" path="res://base_level/cenas/obstaculos/espinho.tscn" id="14_kcp5r"]
 [ext_resource type="PackedScene" uid="uid://c8byde8de28rd" path="res://base_level/cenas/obstaculos/tronco.tscn" id="14_mkga7"]
 [ext_resource type="PackedScene" path="res://base_level/cenas/boss_fox.tscn" id="17_5pjn6"]
+[ext_resource type="Texture2D" uid="uid://bv7a11dvl5o55" path="res://Arts/lvl2/arvore 1.png" id="18_hlcw4"]
+[ext_resource type="Texture2D" uid="uid://cuugqs3w61ckd" path="res://Arts/lvl2/arvore 2.png" id="19_eherm"]
+[ext_resource type="Texture2D" uid="uid://cfweaefu41wkc" path="res://Arts/lvl2/arvore 3.png" id="20_2luml"]
+[ext_resource type="Texture2D" uid="uid://b3f1i5ljx0cam" path="res://Arts/lvl2/arvore 4.png" id="21_j5lj3"]
+[ext_resource type="Texture2D" uid="uid://tkhbjlo1lkou" path="res://Arts/lvl2/arvore 5.png" id="22_otbu1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1t1vy"]
 texture = ExtResource("7_sd7si")
@@ -220,10 +225,6 @@ rotation = 1.79594
 position = Vector2(3288, 313)
 rotation = 1.79594
 
-[node name="Espinho4" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
-position = Vector2(3807, 395)
-rotation = 1.79594
-
 [node name="Espinho5" parent="Obstaculos" instance=ExtResource("14_kcp5r")]
 position = Vector2(5279, 382)
 rotation = 1.79594
@@ -256,6 +257,46 @@ scale = Vector2(1, 1)
 
 [node name="BossFox" parent="." instance=ExtResource("17_5pjn6")]
 position = Vector2(-121, 331)
+
+[node name="Arvore1" type="Sprite2D" parent="."]
+position = Vector2(135, 454)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_hlcw4")
+
+[node name="Arvore2" type="Sprite2D" parent="."]
+position = Vector2(1027, 483)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("19_eherm")
+
+[node name="Arvore3" type="Sprite2D" parent="."]
+position = Vector2(2720, 418)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_2luml")
+
+[node name="Arvore4" type="Sprite2D" parent="."]
+position = Vector2(4845, 421)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("21_j5lj3")
+
+[node name="Arvore5" type="Sprite2D" parent="."]
+position = Vector2(7678, 447)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("22_otbu1")
+
+[node name="Arvore6" type="Sprite2D" parent="."]
+position = Vector2(8889, 422)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_hlcw4")
+
+[node name="Arvore7" type="Sprite2D" parent="."]
+position = Vector2(9958, 458)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("19_eherm")
+
+[node name="Arvore8" type="Sprite2D" parent="."]
+position = Vector2(10668, 424)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_2luml")
 
 [connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
 [connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
