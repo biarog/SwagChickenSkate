@@ -259,7 +259,6 @@ position = Vector2(-121, 331)
 
 [connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
 [connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
-[connection signal="body_entered" from="VictoryArea" to="CameraLevel" method="_on_victory_area_body_entered"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo2" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo4" to="." method="_on_got_hit"]
