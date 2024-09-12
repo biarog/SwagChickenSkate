@@ -112,6 +112,46 @@ motion_mirroring = Vector2(1152, 0)
 texture = ExtResource("5_cbl73")
 centered = false
 
+[node name="Arvore1" type="Sprite2D" parent="."]
+position = Vector2(135, 454)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_hlcw4")
+
+[node name="Arvore2" type="Sprite2D" parent="."]
+position = Vector2(1027, 483)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("19_eherm")
+
+[node name="Arvore3" type="Sprite2D" parent="."]
+position = Vector2(2720, 418)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_2luml")
+
+[node name="Arvore4" type="Sprite2D" parent="."]
+position = Vector2(4845, 421)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("21_j5lj3")
+
+[node name="Arvore5" type="Sprite2D" parent="."]
+position = Vector2(7678, 447)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("22_otbu1")
+
+[node name="Arvore6" type="Sprite2D" parent="."]
+position = Vector2(8889, 422)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("18_hlcw4")
+
+[node name="Arvore7" type="Sprite2D" parent="."]
+position = Vector2(9958, 458)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("19_eherm")
+
+[node name="Arvore8" type="Sprite2D" parent="."]
+position = Vector2(10668, 424)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("20_2luml")
+
 [node name="Player" parent="." instance=ExtResource("11_nlq7j")]
 position = Vector2(477, 558)
 scale = Vector2(0.5, 0.5)
@@ -257,46 +297,6 @@ scale = Vector2(1, 1)
 
 [node name="BossFox" parent="." instance=ExtResource("17_5pjn6")]
 position = Vector2(-121, 331)
-
-[node name="Arvore1" type="Sprite2D" parent="."]
-position = Vector2(135, 454)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("18_hlcw4")
-
-[node name="Arvore2" type="Sprite2D" parent="."]
-position = Vector2(1027, 483)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("19_eherm")
-
-[node name="Arvore3" type="Sprite2D" parent="."]
-position = Vector2(2720, 418)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("20_2luml")
-
-[node name="Arvore4" type="Sprite2D" parent="."]
-position = Vector2(4845, 421)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("21_j5lj3")
-
-[node name="Arvore5" type="Sprite2D" parent="."]
-position = Vector2(7678, 447)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("22_otbu1")
-
-[node name="Arvore6" type="Sprite2D" parent="."]
-position = Vector2(8889, 422)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("18_hlcw4")
-
-[node name="Arvore7" type="Sprite2D" parent="."]
-position = Vector2(9958, 458)
-scale = Vector2(0.15, 0.15)
-texture = ExtResource("19_eherm")
-
-[node name="Arvore8" type="Sprite2D" parent="."]
-position = Vector2(10668, 424)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("20_2luml")
 
 [connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
 [connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
