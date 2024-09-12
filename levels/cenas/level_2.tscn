@@ -22,26 +22,42 @@
 texture = ExtResource("7_sd7si")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 0, -32, 0, -32, -16)
 0:0/0/physics_layer_0/polygon_0/one_way = true
 1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 0, -32, 0, -32, -16)
 1:0/0/physics_layer_0/polygon_0/one_way = true
 2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
 2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 0, -32, 0)
 2:0/0/physics_layer_0/polygon_0/one_way = true
 0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 0, -32, 0)
 0:1/0/physics_layer_0/polygon_0/one_way = true
 1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 0, -32, 0)
 1:1/0/physics_layer_0/polygon_0/one_way = true
 2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
 2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 0, -32, 0)
 2:1/0/physics_layer_0/polygon_0/one_way = true
 0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
 0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 32, -32, 32, -32, -16)
 1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
 1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -16, 32, -16, 32, 32, -32, 32)
 
 [sub_resource type="TileSet" id="TileSet_4201n"]
@@ -246,7 +262,6 @@ position = Vector2(-121, 331)
 
 [connection signal="exited_camera" from="Player" to="." method="_on_player_exited_camera"]
 [connection signal="body_entered" from="VictoryArea" to="." method="_on_victory_area_body_entered"]
-[connection signal="body_entered" from="VictoryArea" to="CameraLevel" method="_on_victory_area_body_entered"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo2" to="." method="_on_got_hit"]
 [connection signal="got_hit" from="Obstaculos/Cogumelo3" to="." method="_on_got_hit"]
