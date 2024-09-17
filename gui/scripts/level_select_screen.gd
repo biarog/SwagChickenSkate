@@ -40,7 +40,7 @@ func get_levels(path) -> void:
 		while file_name != "" :
 			qnt_levels += 1
 			grid.set_columns(qnt_levels)
-			create_level_button('%s/%s' % [dir.get_current_dir(), file_name], file_name)
+			create_level_button('%s/%s' % [dir.get_current_dir(), file_name.trim_suffix('.remap')], file_name)
 			file_name = dir.get_next()
 		
 		dir.list_dir_end()
@@ -51,7 +51,7 @@ func get_levels(path) -> void:
 #Instancia um novo botao de nivel, alem de adiciona-lo na grid
 func create_level_button(level_path: String, level_name: String) -> void:
 	var button = LEVEL_BTN.instantiate()
-	button.text = level_name.trim_suffix('.tscn').replace('_', ' ')
+	button.text = level_name.trim_suffix('.tscn.remap').replace('_', ' ')
 	button.scene_path = level_path
 	grid.add_child(button)
 

@@ -13,10 +13,12 @@ config_version=5
 config/name="Swag Chicken Skate"
 run/main_scene="res://gui/cenas/title_screen.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
-config/icon="res://Arts/icon.svg"
+boot_splash/bg_color=Color(1, 0.847059, 1, 1)
+config/icon="res://Arts/icon.png"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [input]

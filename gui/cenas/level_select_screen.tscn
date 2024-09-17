@@ -52,7 +52,7 @@ texture = ExtResource("5_y8uvf")
 centered = false
 
 [node name="Divisao4" type="Sprite2D" parent="Arte"]
-position = Vector2(3005, 3)
+position = Vector2(3005, 0)
 scale = Vector2(0.68, 1)
 texture = ExtResource("5_y8uvf")
 centered = false
